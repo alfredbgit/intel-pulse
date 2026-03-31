@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntelPulse — Know What Your Competitors Do Before They Do It</title>
+  <meta name="description" content="Competitive intel report for auto repair shop owners. Know what local shops, dealers, and chains are doing — delivered as a PDF in 24 hours. $199, one-time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ffffff; --bg-subtle: #f8f9fc; --bg-dark: #0d1117;
+      --text: #1a1a2e; --text-muted: #5a6474; --border: #e4e7ef;
+      --accent: #2563eb; --accent-hover: #1d4ed8; --accent-light: #eff4ff;
+      --success: #16a34a; --radius: 8px; --radius-lg: 12px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+      --shadow-lg: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; color: var(--text); background: var(--bg); }
+    h1, h2, h3 { font-family: 'Merriweather', Georgia, serif; line-height: 1.2; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; } section:nth-child(even) { background: var(--bg-subtle); }
+
+    /* NAV */
+    nav { position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 100; }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-family: 'Merriweather', serif; font-weight: 900; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-cta { font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; padding: 8px 18px; border: 1.5px solid var(--accent); border-radius: 6px; transition: all 0.15s; }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
+
+    /* HERO */
+    .hero { background: var(--bg); text-align: center; padding: 100px 0 80px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--text); max-width: 760px; margin: 0 auto 20px; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 36px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .btn-primary { background: var(--accent); color: #fff; font-size: 0.95rem; font-weight: 600; padding: 13px 28px; border-radius: var(--radius); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; transition: background 0.15s, transform 0.1s; }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--text); font-size: 0.95rem; font-weight: 500; padding: 13px 24px; border-radius: var(--radius); text-decoration: none; border: 1.5px solid var(--border); display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.15s; }
+    .btn-secondary:hover { border-color: var(--text-muted); background: var(--bg-subtle); }
+    .hero-note { font-size: 0.825rem; color: var(--text-muted); }
+    .hero-note strong { color: var(--success); }
+
+    /* SHARED */
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: var(--text); margin-bottom: 16px; }
+    .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 52px; line-height: 1.7; text-align: center; }
+
+    /* HOW IT WORKS */
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .step { text-align: center; padding: 28px 20px; }
+    .step-number { width: 48px; height: 48px; background: var(--accent-light); color: var(--accent); font-size: 1.1rem; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .step h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* WHAT YOU GET */
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 720px; margin: 0 auto; }
+    .feature-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+    .feature-icon { width: 32px; height: 32px; min-width: 32px; background: var(--accent-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .feature-icon svg { width: 16px; height: 16px; color: var(--accent); }
+    .feature-item strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .feature-item span { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* WHO */
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
+    .who-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; text-align: center; }
+    .who-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* SAMPLE REPORT */
+    .sample-wrapper { max-width: 760px; margin: 0 auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .sample-header { background: var(--bg-dark); padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; }
+    .sample-header-title { font-family: 'Merriweather', serif; font-size: 0.9rem; font-weight: 700; color: #fff; }
+    .sample-header-date { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+    .sample-body { padding: 28px; }
+    .sample-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 24px; }
+    .sample-table th { text-align: left; padding: 8px 12px; background: var(--bg-subtle); color: var(--text-muted); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+    .sample-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .sample-table tr:last-child td { border-bottom: none; }
+    .sample-table .company { font-weight: 600; }
+    .signal-badge { display: inline-block; font-size: 0.68rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: #fef3c7; color: #92400e; }
+    .signal-badge.new { background: #dcfce7; color: #166534; }
+    .sample-actions-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 10px; }
+    .sample-actions-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sample-actions-list li { font-size: 0.875rem; color: var(--text); padding-left: 20px; position: relative; }
+    .sample-actions-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto; }
+    .pricing-card { background: var(--bg); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px; position: relative; }
+    .pricing-card.featured { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(37,99,235,0.08), var(--shadow-lg); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 14px; border-radius: 20px; letter-spacing: 0.5px; white-space: nowrap; }
+    .pricing-name { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 12px; }
+    .pricing-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+    .pricing-price .amount { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 900; }
+    .pricing-price .per { font-size: 0.9rem; color: var(--text-muted); }
+    .pricing-tagline { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; min-height: 40px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; }
+    .pricing-features li svg { width: 16px; height: 16px; color: var(--success); min-width: 16px; }
+    .pricing-features li.muted { color: var(--text-muted); }
+    .pricing-features li.muted svg { color: var(--text-muted); opacity: 0.5; }
+    .btn-pricing { display: block; text-align: center; padding: 13px; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.15s; width: 100%; }
+    .btn-pricing-primary { background: var(--accent); color: #fff; } .btn-pricing-primary:hover { background: var(--accent-hover); }
+    .btn-pricing-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); } .btn-pricing-secondary:hover { border-color: var(--text-muted); background: var(--bg-subtle); }
+    .pricing-footnote { text-align: center; margin-top: 28px; font-size: 0.85rem; color: var(--text-muted); }
+
+    /* CTA */
+    .cta-section { background: var(--bg-dark); color: #fff; text-align: center; padding: 90px 0; }
+    .cta-section h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 900; color: #fff; margin-bottom: 16px; }
+    .cta-section p { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 480px; margin: 0 auto 36px; }
+    .btn-cta { background: #fff; color: var(--text); font-size: 1rem; font-weight: 700; padding: 15px 36px; border-radius: var(--radius); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.15s; }
+    .btn-cta:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: var(--bg-subtle); border-top: 1px solid var(--border); padding: 32px 0; }
+    footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.95rem; color: var(--text); }
+    .footer-logo span { color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.825rem; color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-muted); width: 100%; text-align: center; margin-top: 8px; }
+
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border-radius: var(--radius-lg); max-width: 520px; width: 100%; padding: 36px; position: relative; box-shadow: var(--shadow-lg); max-height: 90vh; overflow-y: auto; }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+    .modal-close:hover { background: var(--bg-subtle); }
+    .modal h2 { font-size: 1.3rem; font-weight: 900; margin-bottom: 6px; }
+    .modal-sub { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 0.9rem; font-family: inherit; color: var(--text); background: var(--bg); transition: border-color 0.15s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group .hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+    .btn-submit { width: 100%; background: var(--accent); color: #fff; font-size: 0.95rem; font-weight: 600; padding: 13px; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; margin-top: 8px; }
+    .btn-submit:hover { background: var(--accent-hover); }
+    .form-success { display: none; text-align: center; padding: 20px 0; }
+    .form-success.show { display: block; }
+    .form-success svg { color: var(--success); margin-bottom: 12px; }
+    .form-success h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .form-success p { font-size: 0.875rem; color: var(--text-muted); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .steps-grid, .features-grid, .who-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card.featured { order: -1; }
+      .sample-table { font-size: 0.75rem; }
+    }
+    @media (max-width: 480px) { .hero h1 { font-size: 1.8rem; } .modal { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="logo">Intel<span>Pulse</span></a>
+    <a href="#pricing" class="nav-cta">Start Free Report</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Competitive Intel for Auto Shops</div>
+    <h1>Know what your competitors do<br>before they do it.</h1>
+    <p class="hero-sub">Know what the shop down the street is charging, what services they're adding, and what dealers are promoting — delivered as a structured PDF in 24 hours.</p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn-primary">
+        Start your free first report
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how-it-works" class="btn-secondary">How it works</a>
+    </div>
+    <p class="hero-note"><strong>Delivered within 24 hours.</strong> No subscription. Pay once, own the intel.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="container">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">Intel, delivered. Not data, dumped.</h2>
+    <p class="section-sub">Three steps. Every Monday morning. Real intelligence that fits in your inbox.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Tell us your competitors</h3>
+        <p>After subscribing, you submit your top 10 competitors. We set up monitoring across pricing, features, content, and hiring.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>We track them every week</h3>
+        <p>We monitor pricing changes, new services, promotions, location expansions, and online reviews — so you don't have to.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Report delivered within 24 hours</h3>
+        <p>A clean PDF report lands in your inbox within 24 hours. Read it in under 10 minutes. Share it with your staff or keep it as your planning reference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what-you-get">
+  <div class="container">
+    <p class="section-label">What You Get</p>
+    <h2 class="section-title">A weekly intel digest, not a data firehose.</h2>
+    <p class="section-sub">Everything you need to act on competitor intel — in one clean document.</p>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div><strong>Weekly PDF Report</strong><span>Styled and branded — ready to forward to your team without cleanup.</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div><strong>Pricing Change Alerts</strong><span>When a competitor changes pricing, you'll know exactly what changed and when.</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div><strong>Feature &amp; Product Launch Tracking</strong><span>New services, equipment investments, and service category additions — surfaced fast.</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div><strong>Content &amp; SEO Move Monitoring</strong><span>New blog posts, landing pages, and content plays that signal strategy shifts.</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div><strong>Job Postings as Signals</strong><span>Hiring spikes reveal product direction. We track it weekly per competitor.</span></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+        <div><strong>Promotions &amp; Offers Tracker</strong><span>Discount campaigns, free trial extensions, and special offers — logged and dated.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who-its-for">
+  <div class="container">
+    <p class="section-label">Who It's For</p>
+    <h2 class="section-title">Built for auto repair shop owners who don't have time to research the competition.</h2>
+    <div class="who-grid">
+      <div class="who-card"><p>You run or manage an auto repair shop and want to know what the competition is doing before they do it.</p></div>
+      <div class="who-card"><p>You're setting labor rates and service prices without knowing what shops nearby are charging.</p></div>
+      <div class="who-card"><p>You want to walk into your next team meeting with real competitive data, not guesswork.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE REPORT -->
+<section id="sample">
+  <div class="container">
+    <p class="section-label">Sample Report</p>
+    <h2 class="section-title">What a weekly digest looks like.</h2>
+    <p class="section-sub">Every report is structured the same way — overview table, top signals, and three recommended actions.</p>
+    <div class="sample-wrapper">
+      <div class="sample-header">
+        <span class="sample-header-title">IntelPulse — Auto Repair Competitive Intel Report</span>
+        <span class="sample-header-date">Report Date: March 2026</span>
+      </div>
+      <div class="sample-body">
+        <table class="sample-table">
+          <thead><tr><th>Competitor</th><th>Signal</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="company">Main Street Auto</td>
+              <td><span class="signal-badge new">New Service</span> Added transmission service. Q1 push.</td>
+              <td>Review your transmission offering vs. their pricing.</td>
+            </tr>
+            <tr>
+              <td class="company">OK Tire &amp; Auto</td>
+              <td><span class="signal-badge">Promotion</span> Running $50 off any service this month.</td>
+              <td>Consider whether to match or hold your current pricing.</td>
+            </tr>
+            <tr>
+              <td class="company">Jiffy Lube</td>
+              <td><span class="signal-badge">Expansion</span> Opened new location 3 miles east.</td>
+              <td>Review your customer catchment area for impact.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sample-actions-title">Top 3 Actions This Week</p>
+        <ul class="sample-actions-list">
+          <li>Review your transmission service pricing against Main Street Auto before they capture more market share.</li>
+          <li>Check whether OK Tire's $50-off promo is affecting your appointment volume this week.</li>
+          <li>Assess the competitive impact of the new Jiffy Lube location on your north-side customers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">One report. No subscription.</h2>
+    <p class="section-sub">Pay once. Get the intel on your local competition. No subscription.</p>
+    <div class="pricing-grid" style="grid-template-columns: 1fr; max-width: 480px; margin: 0 auto;">
+      <div class="pricing-card featured">
+        <div class="pricing-badge">One-Time Purchase</div>
+        <div class="pricing-name">Intel Report</div>
+        <div class="pricing-price"><span class="amount">$199</span><span class="per">one-time</span></div>
+        <p class="pricing-tagline">What the competition is doing, documented. A structured PDF delivered within 24 hours.</p>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Up to 10 competitors analyzed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Structured PDF report, professionally styled</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Service & labor rate comparisons</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Promotions & discount tracking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Top 3 recommended actions</li>
+        </ul>
+        <button class="btn-pricing btn-pricing-primary" onclick="openModal('onetime')">Get Your Intel Report</button>
+      </div>
+    </div>
+    <p class="pricing-footnote" style="text-align:center;margin-top:28px;font-size:.85rem;color:var(--text-muted);">
+      One-time purchase. No subscription. Pay once and it's yours.
+    </p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Stop guessing about the competition.</h2>
+    <p>The shop down the street is making moves. Know what they're doing before your customers do.</p>
+    <a href="#pricing" class="btn-cta">
+      Start your free first report
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="footer-logo">Intel<span>Pulse</span></span>
+    <nav class="footer-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="mailto:hello@intelpulse.io">hello@intelpulse.io</a>
+    </nav>
+    <p class="footer-copy">© 2026 IntelPulse. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- INTAKE MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div id="modal-form-container">
+      <h2>Start your free report</h2>
+      <p class="modal-sub">Complete your one-time purchase. We'll deliver your competitive intel report within 24 hours of receiving your competitor list.</p>
+      <form id="intake-form" onsubmit="handleSubmit(event)">
+        <div class="form-group"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Sarah Chen" required></div>
+        <div class="form-group"><label for="email">Work email</label><input type="email" id="email" name="email" placeholder="sarah@company.com" required></div>
+        <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Acme SaaS" required></div>
+        <div class="form-group"><label for="competitors">Your top 10 competitors</label><textarea id="competitors" name="competitors" rows="5" placeholder="One competitor per line, e.g.:&#10;Intercom&#10;Zendesk&#10;Freshdesk&#10;..." required></textarea><p class="hint">List up to 10 competitors. We'll start monitoring these for your first report.</p></div>
+        <div class="form-group"><label for="plan">Plan</label><select id="plan" name="plan"><option value="onetime">Intel Report — $199 (one-time)</option></select></div>
+        <button type="submit" class="btn-submit" id="submit-btn">Continue to payment →</button>
+      </form>
+    </div>
+    <div class="form-success" id="form-success">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+      <h3>You're on the list!</h3>
+      <p id="success-message">We'll process your subscription and send your first intel report within 2 business days. Check your inbox — we just sent a confirmation.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Replace these with your actual Stripe Payment Link URLs from the Stripe Dashboard
+  // Products > [product] > Payment links tab > Create payment link
+  const STRIPE_LINKS = {
+    onetime: 'https://buy.stripe.com/YOUR_ONE_TIME_PAYMENT_LINK_ID',
+  };
+
+  let selectedPlan = 'starter';
+
+  function openModal(plan) {
+    selectedPlan = plan;
+    document.getElementById('plan').value = plan;
+    // Plan name is static for one-time
+    document.getElementById('modal-plan-name').textContent =
+      'Intel Report — $199 (one-time)';
+    document.getElementById('modal-form-container').style.display = 'block';
+    document.getElementById('form-success').classList.remove('show');
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // Show success confirmation
+    document.getElementById('modal-form-container').style.display = 'none';
+    const success = document.getElementById('form-success');
+    document.getElementById('success-message').textContent =
+      'We have your details. Redirecting to Stripe to complete your subscription...';
+    success.classList.add('show');
+
+    // Redirect to Stripe Payment Link after short delay
+    const stripeUrl = STRIPE_LINKS[selectedPlan] + '?prefilled_email=' + encodeURIComponent(data.email);
+    console.log('IntelPulse intake:', data);
+    console.log('Stripe redirect to:', stripeUrl);
+
+    // Uncomment to enable Stripe redirect:
+    // setTimeout(() => { window.location.href = stripeUrl; }, 1500);
+    // For now, stay on page with success state
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
