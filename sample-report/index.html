@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitive Intel Report — A+ Japanese Auto | IntelPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --bg: #ffffff;
+      --bg-subtle: #f8f9fc;
+      --bg-dark: #0d1117;
+      --text: #1a1a2e;
+      --text-muted: #5a6474;
+      --border: #e4e7ef;
+      --green: #16a34a;
+      --amber: #d97706;
+      --red: #dc2626;
+    }
+    @page { size: letter; margin: 0; }
+    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    html, body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 10.5pt;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    h1, h2, h3 { font-family: 'Merriweather', Georgia, serif; line-height: 1.2; }
+
+    .page { width: 8.5in; min-height: 11in; page-break-after: always; position: relative; }
+    .page:last-child { page-break-after: avoid; }
+
+    /* HEADER */
+    .site-header { background: var(--bg-dark); color: #fff; padding: 13px 36px; display: flex; align-items: center; justify-content: space-between; }
+    .site-header .logo { font-family: 'Merriweather', serif; font-weight: 900; font-size: 13.5pt; color: #fff; }
+    .site-header .logo span { color: var(--accent); }
+    .site-header .tagline { font-size: 7.5pt; color: rgba(255,255,255,0.45); text-align: right; line-height: 1.3; }
+
+    /* META BAR */
+    .meta-bar { background: var(--bg-subtle); border-bottom: 1px solid var(--border); padding: 8px 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
+    .meta-bar .client-name { font-size: 8.5pt; font-weight: 700; color: var(--text); }
+    .meta-bar .report-info { display: flex; gap: 16px; flex-wrap: wrap; }
+    .meta-bar .report-info span { font-size: 7.5pt; color: var(--text-muted); }
+    .meta-bar .report-info strong { color: var(--text); font-weight: 600; }
+
+    /* BODY */
+    .body { padding: 20px 36px 48px; }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 6.5pt; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--accent); margin-bottom: 5px; margin-top: 14px; }
+
+    /* PAGE TITLE */
+    .page-title { font-size: 18pt; font-weight: 900; color: var(--text); margin-bottom: 3px; }
+    .page-subtitle { font-size: 8.5pt; color: var(--text-muted); margin-bottom: 14px; font-family: 'Inter', sans-serif; }
+
+    /* BADGES */
+    .badge { display: inline-block; font-size: 5.8pt; font-weight: 700; padding: 2px 7px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .badge-chain { background: #eff4ff; color: var(--accent); }
+    .badge-indie { background: #f0fdf4; color: var(--green); }
+    .badge-specialist { background: #fef3c7; color: var(--amber); }
+    .badge-client { background: #f3e8ff; color: #7c3aed; }
+
+    /* OVERVIEW TABLE */
+    .overview-table-wrap { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 16px; }
+    .overview-table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+    .overview-table th { background: #1a1a2e; color: #fff; padding: 7px 10px; text-align: left; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+    .overview-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .overview-table tr:last-child td { border-bottom: none; }
+    .overview-table tr:nth-child(even) td { background: var(--bg-subtle); }
+    .comp-name { font-weight: 700; font-size: 8pt; }
+    .comp-tagline { font-size: 7pt; color: var(--text-muted); font-style: italic; }
+
+    /* SECTION HEADER */
+    .section-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid var(--bg-dark); }
+    .section-header h2 { font-size: 11pt; font-weight: 900; color: var(--text); }
+    .section-header .section-sub { font-size: 7.5pt; color: var(--text-muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+
+    /* COMPETITOR CARDS */
+    .competitor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    .comp-card { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; page-break-inside: avoid; }
+    .comp-card-header { background: var(--bg-subtle); padding: 8px 11px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .comp-card-name { font-size: 8.5pt; font-weight: 700; color: var(--text); }
+    .comp-card-tagline { font-size: 6.8pt; color: var(--text-muted); font-style: italic; margin-top: 1px; }
+    .comp-card-body { padding: 8px 11px; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .comp-field-label { font-size: 5.8pt; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+    .comp-field-value { font-size: 7.2pt; color: var(--text); line-height: 1.45; }
+    .opp-value { color: var(--green); }
+    .weakness-value { color: var(--red); }
+    .strength-value { color: var(--green); }
+
+    /* PRICING MATRIX */
+    .pricing-matrix { width: 100%; border-collapse: collapse; font-size: 7.5pt; margin-bottom: 14px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .pricing-matrix th { background: var(--bg-dark); color: #fff; padding: 6px 9px; text-align: left; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.4px; }
+    .pricing-matrix td { padding: 6px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .pricing-matrix tr:last-child td { border-bottom: none; }
+    .pricing-matrix tr:nth-child(even) td { background: var(--bg-subtle); }
+    .shop-name { font-weight: 700; font-size: 7.8pt; }
+    .type-tag { font-size: 5.8pt; font-weight: 600; padding: 1px 6px; border-radius: 10px; }
+    tspan.chain { background: #eff4ff; color: var(--accent); }
+
+    /* ANALYSIS CARDS */
+    .analysis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 12px; }
+    .analysis-card { border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; }
+    .analysis-card h3 { font-size: 8.5pt; font-weight: 700; color: var(--text); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+    .analysis-card ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .analysis-card ul li { font-size: 7.2pt; color: var(--text); padding-left: 12px; position: relative; line-height: 1.4; }
+    .analysis-card ul li::before { content: '\25B8'; position: absolute; left: 0; color: var(--accent); font-size: 6.5pt; }
+
+    /* OPPORTUNITY CALLOUT */
+    .opp-callout { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; }
+    .opp-callout-label { font-size: 5.8pt; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--green); margin-bottom: 3px; }
+    .opp-callout p { font-size: 7.8pt; color: #1a1a2e; line-height: 1.5; }
+
+    /* ACTIONS BOX */
+    .actions-box { background: var(--bg-dark); color: #fff; border-radius: 6px; padding: 13px 17px; margin-top: 12px; }
+    .actions-box h3 { font-size: 9pt; font-weight: 700; color: #fff; margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+    .actions-list { display: flex; flex-direction: column; gap: 6px; }
+    .action-item { display: flex; align-items: flex-start; gap: 9px; font-size: 7.5pt; color: rgba(255,255,255,0.88); }
+    .action-num { min-width: 17px; height: 17px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 6.5pt; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .action-priority { font-size: 5.5pt; font-weight: 700; padding: 1px 5px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.3px; margin-left: 4px; flex-shrink: 0; }
+    .priority-high { background: var(--red); color: #fff; }
+    .priority-med { background: var(--amber); color: #fff; }
+    .priority-std { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+
+    /* FOOTER */
+    .page-bottom-bar { background: var(--bg-subtle); border-top: 1px solid var(--border); padding: 7px 36px; display: flex; align-items: center; justify-content: space-between; position: absolute; bottom: 0; left: 0; right: 0; }
+    .page-bottom-bar span { font-size: 6.5pt; color: var(--text-muted); }
+
+    .no-break { page-break-inside: avoid; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ PAGE 1 ═══════════════════════════════════════ -->
+<div class="page">
+
+  <div class="site-header">
+    <div class="logo">Intel<span>Pulse</span></div>
+    <div class="tagline">Competitive Intel · Austin, TX Market · March 2026</div>
+  </div>
+
+  <div class="meta-bar">
+    <div class="client-name">Client: A+ Japanese Auto · Austin, TX</div>
+    <div class="report-info">
+      <span>Report: <strong>Competitive Landscape</strong></span>
+      <span>Date: <strong>March 31, 2026</strong></span>
+      <span>Competitors: <strong>5 tracked</strong></span>
+      <span>Market: <strong>Austin, TX</strong></span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p class="section-label">Executive Summary</p>
+    <h1 class="page-title">Auto Repair Competitive Landscape</h1>
+    <p class="page-subtitle">Austin, TX — 5-competitor intelligence brief for A+ Japanese Auto. Data collected March 24–31, 2026. Avg. market labor rate: $140–$145/hr.</p>
+
+    <p class="section-label">Competitor Overview</p>
+    <div class="overview-table-wrap">
+      <table class="overview-table">
+        <thead>
+          <tr>
+            <th>Competitor</th>
+            <th>Type</th>
+            <th>Tagline / Positioning</th>
+            <th>Primary Strength</th>
+            <th>Primary Weakness</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="comp-name">Firestone Complete Auto Care<br><span class="comp-tagline">S. Congress Ave · 8 Austin locations</span></td>
+            <td><span class="badge badge-chain">National Chain</span></td>
+            <td class="comp-tagline">"Trusted auto care since 1926"</td>
+            <td>Brand recognition, wide service menu, no-appointment convenience</td>
+            <td>No Japanese make specialization; high technician turnover</td>
+          </tr>
+          <tr>
+            <td class="comp-name">Genuine Automotive &amp; Diesel<br><span class="comp-tagline">East Austin · Nextdoor Top-Rated</span></td>
+            <td><span class="badge badge-indie">Independent</span></td>
+            <td class="comp-tagline">"Neighborhood favorite" — Carfax Top-Rated</td>
+            <td>Strong local word-of-mouth; free pickup/delivery; loaner cars</td>
+            <td>Often booked 1–2 weeks out; diesel dilutes car focus</td>
+          </tr>
+          <tr>
+            <td class="comp-name">Advanced Automotive &amp; Tire<br><span class="comp-tagline">Burnet Road · Est. 1967</span></td>
+            <td><span class="badge badge-indie">Independent</span></td>
+            <td class="comp-tagline">"Competitive pricing on tires &amp; all repairs"</td>
+            <td>Lowest labor rate in market ($135/hr); 58-year trust</td>
+            <td>Aging facilities; no modern amenities; no specialist identity</td>
+          </tr>
+          <tr>
+            <td class="comp-name">Christian Brothers Automotive<br><span class="comp-tagline">Cedar Park · J.D. Power #1 for 6th year</span></td>
+            <td><span class="badge badge-chain">Franchise</span></td>
+            <td class="comp-tagline">"#1 in J.D. Power 2025 Customer Satisfaction"</td>
+            <td>Highest satisfaction ranking; consistent clean experience</td>
+            <td>Premium pricing 20–30% above market; outside central Austin</td>
+          </tr>
+          <tr>
+            <td class="comp-name">Grand Imports<br><span class="comp-tagline">Austin · Honda/Toyota/Lexus/Acura specialist</span></td>
+            <td><span class="badge badge-specialist">Specialist</span></td>
+            <td class="comp-tagline">"Factory-trained on Honda, Toyota, Lexus, Acura"</td>
+            <td>Direct Japanese make positioning; alignment specialization</td>
+            <td>Narrower menu; limited marketing footprint; no loyalty program</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-label" style="margin-top:0;">Competitor Profiles</p>
+    <div class="section-header">
+      <h2>Full Competitor Breakdowns</h2>
+      <span class="section-sub">Pricing, strengths, weaknesses, and A+ positioning opportunities</span>
+    </div>
+
+    <div class="competitor-grid">
+
+      <div class="comp-card no-break">
+        <div class="comp-card-header">
+          <div>
+            <div class="comp-card-name">Firestone Complete Auto Care</div>
+            <div class="comp-card-tagline">S. Congress Ave · National chain · Est. 1926</div>
+          </div>
+          <span class="badge badge-chain">Chain</span>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-field">
+            <div class="comp-field-label">Pricing Range</div>
+            <div class="comp-field-value">Oil change (conv.): $40–$65<br>Oil change (synth.): $65–$90<br>Brake service: $150–$300<br>Tire install: $23/tire + tire cost<br>Labor rate: ~$140/hr</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Strengths</div>
+            <div class="comp-field-value strength-value">8+ Austin locations; massive brand recognition; no appointment needed for oil/tires; nationwide warranty</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Weaknesses</div>
+            <div class="comp-field-value weakness-value">Zero Japanese make specialization; high tech turnover; generic customer experience; discount retailers undercutting on tires</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Opportunities for A+</div>
+            <div class="comp-field-value opp-value">Firestone's generic approach is A+'s opening. Japanese car owners who want expertise — not just convenience — are a captive audience for A+'s specialist positioning.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-card no-break">
+        <div class="comp-card-header">
+          <div>
+            <div class="comp-card-name">Genuine Automotive &amp; Diesel</div>
+            <div class="comp-card-tagline">East Austin · Independent · Nextdoor Top-Rated</div>
+          </div>
+          <span class="badge badge-indie">Independent</span>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-field">
+            <div class="comp-field-label">Pricing Range</div>
+            <div class="comp-field-value">Oil change (conv.): $55–$75<br>Oil change (synth.): $75–$95<br>Brake service: $180–$350<br>Diagnostics: included w/ repair<br>Labor rate: ~$145/hr</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Strengths</div>
+            <div class="comp-field-value strength-value">Best word-of-mouth in East Austin; free pickup/delivery; loaner cars; Carfax Top-Rated badge; diesel + car versatility</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Weaknesses</div>
+            <div class="comp-field-value weakness-value">Currently booked 1–2 weeks out; diesel focus competes with core car repair identity; less visible to North/Central Austin</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Opportunities for A+</div>
+            <div class="comp-field-value opp-value">Availability gap is A+'s biggest opening. Customers turned away by Genuine are A+'s lowest-hanging fruit — next-day availability is a direct differentiator.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-card no-break">
+        <div class="comp-card-header">
+          <div>
+            <div class="comp-card-name">Advanced Automotive &amp; Tire</div>
+            <div class="comp-card-tagline">Burnet Road · Independent · Est. 1967</div>
+          </div>
+          <span class="badge badge-indie">Independent</span>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-field">
+            <div class="comp-field-label">Pricing Range</div>
+            <div class="comp-field-value">Oil change (conv.): $45–$65<br>Oil change (synth.): $60–$80<br>Brake service: $140–$280<br>Tire rotation: $25–$45<br>Labor rate: ~$135/hr</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Strengths</div>
+            <div class="comp-field-value strength-value">Lowest labor rate in market ($135/hr); 58-year customer trust; strong Burnet Road catchment; affordable tire pricing</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Weaknesses</div>
+            <div class="comp-field-value weakness-value">Aging facility and website; no online booking; no loaner cars; no specialty positioning; losing ground with younger demographics</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Opportunities for A+</div>
+            <div class="comp-field-value opp-value">Advanced's customer base is aging out. A+ captures the modern-savvy import owner with online booking, SMS updates, and a clean specialist identity.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-card no-break">
+        <div class="comp-card-header">
+          <div>
+            <div class="comp-card-name">Christian Brothers Automotive</div>
+            <div class="comp-card-tagline">Cedar Park · Franchise · J.D. Power #1 (6th year)</div>
+          </div>
+          <span class="badge badge-chain">Franchise</span>
+        </div>
+        <div class="comp-card-body">
+          <div class="comp-field">
+            <div class="comp-field-label">Pricing Range</div>
+            <div class="comp-field-value">Oil change (conv.): $75–$95<br>Oil change (synth.): $95–$120<br>Brake service: $250–$450<br>Tire rotation: $45–$60<br>Labor rate: ~$150/hr</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Strengths</div>
+            <div class="comp-field-value strength-value">Highest independent CSAT ranking in market (J.D. Power 2025); clean, consistent experience; no-pressure sales culture; membership model</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Key Weaknesses</div>
+            <div class="comp-field-value weakness-value">Premium pricing 20–30% above market average; Cedar Park location outside core Austin; no Japanese make focus; membership pressure alienates some</div>
+          </div>
+          <div class="comp-field">
+            <div class="comp-field-label">Opportunities for A+</div>
+            <div class="comp-field-value opp-value">Christian Brothers' premium pricing creates a price-sensitive majority. A+ offers the same quality signals at competitive rates — specialist expertise without the membership overhead.</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /competitor-grid -->
+
+  </div><!-- /body -->
+
+  <div class="page-bottom-bar">
+    <span>IntelPulse · Confidential · For A+ Japanese Auto internal use only</span>
+    <span>Page 1 of 2</span>
+  </div>
+</div><!-- /page 1 -->
+
+<!-- ═══════════════════════════════════════ PAGE 2 ═══════════════════════════════════════ -->
+<div class="page">
+
+  <div class="site-header">
+    <div class="logo">Intel<span>Pulse</span></div>
+    <div class="tagline">Competitive Intel · Austin, TX Market · March 2026</div>
+  </div>
+
+  <div class="meta-bar">
+    <div class="client-name">Client: A+ Japanese Auto · Austin, TX</div>
+    <div class="report-info">
+      <span>Report: <strong>Competitive Landscape</strong></span>
+      <span>Date: <strong>March 31, 2026</strong></span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <p class="section-label">Direct Competitor Spotlight</p>
+    <div class="section-header">
+      <h2>Grand Imports — The Most Dangerous Competitor</h2>
+      <span class="section-sub">Already targeting the same Japanese car owner A+ wants to win</span>
+    </div>
+
+    <div class="analysis-grid">
+      <div class="analysis-card">
+        <h3>Pricing Snapshot</h3>
+        <ul>
+          <li>Oil change (synthetic): $70–$90</li>
+          <li>4-wheel alignment: $89–$110</li>
+          <li>Transmission service: $250–$450</li>
+          <li>Diagnostic (OBD2): $95 flat</li>
+          <li>Labor rate: ~$145/hr</li>
+        </ul>
+      </div>
+      <div class="analysis-card">
+        <h3>Competitive Strengths</h3>
+        <ul>
+          <li>Factory-trained on Honda/Toyota/Lexus/Acura</li>
+          <li>Direct "Japanese import specialist" positioning</li>
+          <li>Alignment &amp; diagnostics specialization</li>
+          <li>Appeals to import owners who distrust generalist shops</li>
+        </ul>
+      </div>
+      <div class="analysis-card">
+        <h3>Competitive Weaknesses</h3>
+        <ul>
+          <li>Narrower service menu — no full-service general repair</li>
+          <li>Limited online visibility and marketing footprint</li>
+          <li>Smaller brand trust outside import-specialist community</li>
+          <li>No loyalty or membership program</li>
+        </ul>
+      </div>
+      <div class="analysis-card">
+        <h3>A+'s Positioning Edge</h3>
+        <ul>
+          <li>Broader menu (full-service vs. import-only)</li>
+          <li>Stronger Google rating (4.8+ vs. 4.4)</li>
+          <li>Can capture domestic + import without diluting brand</li>
+          <li>Superior online presence and customer communication</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="opp-callout">
+      <div class="opp-callout-label">Opportunity for A+ Japanese Auto</div>
+      <p>Grand Imports is the competitor to watch — same positioning A+ wants. A+'s advantage: broader service menu, stronger Google reviews (4.8+ vs. 4.4), and ability to capture domestic + import customers without diluting the specialist brand. A+ should monitor Grand Imports' pricing closely and ensure its rates remain within $10–$15 to prevent price-sensitive customers migrating.</p>
+    </div>
+
+    <p class="section-label">Market Rate Analysis</p>
+    <div class="section-header">
+      <h2>Labor &amp; Service Rate Matrix</h2>
+      <span class="section-sub">Austin, TX competitive landscape — March 2026</span>
+    </div>
+
+    <table class="pricing-matrix">
+      <thead>
+        <tr>
+          <th>Shop</th>
+          <th>Type</th>
+          <th>Labor /hr</th>
+          <th>Oil (conv.)</th>
+          <th>Oil (synth.)</th>
+          <th>Brake (axle)</th>
+          <th>Rotation</th>
+          <th>4-Wheel Align</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="shop-name">A+ Japanese Auto</td>
+          <td><span class="badge badge-client">Client ★</span></td>
+          <td>$130–$140</td>
+          <td>$45–$55</td>
+          <td>$65–$80</td>
+          <td>$160–$220</td>
+          <td>$30–$40</td>
+          <td>$85–$100</td>
+        </tr>
+        <tr>
+          <td class="shop-name">Firestone Complete Auto Care</td>
+          <td><span class="badge badge-chain">Chain</span></td>
+          <td>$140</td>
+          <td>$40–$65</td>
+          <td>$65–$90</td>
+          <td>$150–$300</td>
+          <td>$25–$35</td>
+          <td>$80–$110</td>
+        </tr>
+        <tr>
+          <td class="shop-name">Genuine Automotive &amp; Diesel</td>
+          <td><span class="badge badge-indie">Indie</span></td>
+          <td>$145</td>
+          <td>$55–$75</td>
+          <td>$75–$95</td>
+          <td>$180–$350</td>
+          <td>$30–$40</td>
+          <td>$90–$120</td>
+        </tr>
+        <tr>
+          <td class="shop-name">Advanced Automotive &amp; Tire</td>
+          <td><span class="badge badge-indie">Indie</span></td>
+          <td>$135</td>
+          <td>$45–$65</td>
+          <td>$60–$80</td>
+          <td>$140–$280</td>
+          <td>$25–$45</td>
+          <td>$75–$95</td>
+        </tr>
+        <tr>
+          <td class="shop-name">Christian Brothers Automotive</td>
+          <td><span class="badge badge-chain">Franchise</span></td>
+          <td>$150</td>
+          <td>$75–$95</td>
+          <td>$95–$120</td>
+          <td>$250–$450</td>
+          <td>$45–$60</td>
+          <td>$110–$140</td>
+        </tr>
+        <tr>
+          <td class="shop-name">Grand Imports</td>
+          <td><span class="badge badge-specialist">Specialist</span></td>
+          <td>$145</td>
+          <td>—</td>
+          <td>$70–$90</td>
+          <td>$180–$320</td>
+          <td>—</td>
+          <td>$89–$110</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="section-label">Recommended Actions</p>
+    <div class="section-header">
+      <h2>Top 5 Moves for A+ Japanese Auto</h2>
+      <span class="section-sub">Prioritized by competitive impact and urgency</span>
+    </div>
+
+    <div class="actions-box">
+      <h3>Recommended Actions — Week of March 31, 2026</h3>
+      <div class="actions-list">
+        <div class="action-item">
+          <div class="action-num">1</div>
+          <div>
+            <strong>Audit Grand Imports' online presence</strong> — they have the same Japanese make positioning. Check their Google rating, review volume, and service pages weekly. Know when they add new services or shift pricing. <span class="action-priority priority-high">High Priority</span>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">2</div>
+          <div>
+            <strong>Market next-day availability explicitly</strong> — Genuine Automotive is consistently booked 1–2 weeks out. A+'s fastest path to new customers is capturing overflow. Add "Same-week appointments available" to Google Business Profile and website hero. <span class="action-priority priority-high">High Priority</span>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">3</div>
+          <div>
+            <strong>Position A+ on Japanese make expertise vs. Firestone's generic offering</strong> — create a landing page or Google Business Profile section highlighting Toyota/Honda/Honda service. Use language like "Toyota-certified technicians" and "Honda factory-equipment diagnostics." <span class="action-priority priority-high">High Priority</span>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">4</div>
+          <div>
+            <strong>Review pricing on brake service and alignments</strong> — A+ is competitively priced vs. Firestone and Advanced but 10–15% below Genuine and Grand Imports. Consider a slight increase on alignment ($95–$110) to match Grand Imports' rate while still undercutting Genuine. <span class="action-priority priority-med">Medium Priority</span>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">5</div>
+          <div>
+            <strong>Add a "Why Choose a Specialist?" comparison block</strong> to A+'s website — directly contrast A+'s Japanese make focus against Firestone/Advanced (generalist) and Christian Brothers (premium). A clear comparison page converts search traffic into appointments. <span class="action-priority priority-std">Standard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="page-bottom-bar">
+    <span>IntelPulse · Confidential · For A+ Japanese Auto internal use only · All pricing approximate — confirm directly with shops</span>
+    <span>Page 2 of 2</span>
+  </div>
+</div><!-- /page 2 -->
+
+</body>
+</html>
