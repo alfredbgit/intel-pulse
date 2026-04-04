@@ -1,0 +1,7 @@
+# Vercel
+.vercel/
+auto/
+order-api/
+
+# OS
+*.local
