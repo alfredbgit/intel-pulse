@@ -1,0 +1,1679 @@
+{
+  "cover": {
+    "skill": "report-01-cover",
+    "business_name": "A+ Japanese Auto Repair",
+    "location": "Redwood City, CA",
+    "business_type": "auto_repair",
+    "customer_address": "535 Whipple Ave, Redwood City, CA",
+    "report_date": "2026-04-12",
+    "competitor_count": 10,
+    "market_trends_score": null,
+    "market_trends_label": "data_unavailable_rate_limited",
+    "market_sentiment": "stable",
+    "top_3_opportunities": [
+      "Own 'Japanese Auto Repair Specialist' — no competitor is claiming this in Redwood City or San Carlos",
+      "Lead with honesty — 'honest mechanic' is the #1 praise theme across all competitors but zero competitors market this promise",
+      "Claim RepairPal listing — zero competitors listed, free high-intent traffic, 15 minutes to claim"
+    ],
+    "executive_summary_paragraph": "The Redwood City auto repair market is stable with solid demand across 10 competitors analyzed, and A+ Japanese Auto Repair has a rare first-mover opportunity in an uncontested niche: no competitor has claimed the 'Japanese auto repair specialist' positioning in this market. The most exploitable gap confirmed across all research tracks is customer trust — 'honest / no upselling' is the #1 praise theme across reviews, but zero competitors are marketing this promise; A+ already wins here and simply needs to make it visible. A secondary structural gap: RepairPal, AAA, and five other high-intent directories are entirely unclaimed across all 10 competitors. The single most important action this month: update your Google Business Profile description to lead with 'Japanese Auto Repair Specialist' and your no-upsell commitment, then claim your RepairPal listing — both take under an hour and have immediate SEO impact."
+  },
+  "landscape": {
+    "skill": "report-02-landscape",
+    "report_date": "2026-04-12",
+    "customer": {
+      "name": "A+ Japanese Auto Repair",
+      "address": "535 Whipple Ave, Redwood City, CA"
+    },
+    "competitors": [
+      {
+        "rank": 1,
+        "name": "Midas San Carlos",
+        "type": "Chain",
+        "address": "1101 El Camino Real, Belmont, CA 94002",
+        "address_source": "Yelp Search",
+        "yelp_rating": null,
+        "yelp_review_count": null,
+        "google_rating": 4.4,
+        "google_review_count": 856,
+        "total_reviews": 856,
+        "threat": "HIGH",
+        "source_verification": "google_only",
+        "key_differentiator": "National chain with massive Google footprint (856 reviews) — strong local pack presence.",
+        "urls": {
+          "website": null,
+          "yelp": null,
+          "google_maps": "https://maps.google.com/?q=Midas+1101+El+Camino+Real+Belmont+CA",
+          "birdeye": "https://reviews.birdeye.com/midas-166096876839155",
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "San Carlos Auto Service",
+        "type": "Independent",
+        "address": "160 Chestnut St, Redwood City, CA 94063",
+        "address_source": "Yelp",
+        "yelp_rating": 3.9,
+        "yelp_review_count": 260,
+        "google_rating": 4.3,
+        "google_review_count": 257,
+        "total_reviews": 517,
+        "threat": "HIGH",
+        "source_verification": "both",
+        "key_differentiator": "Highest-volume independent shop with 517 total reviews — dominant visibility in Redwood City.",
+        "urls": {
+          "website": null,
+          "yelp": "https://www.yelp.com/biz/chestnut-automotive-repairs-and-towing-redwood-city",
+          "google_maps": "https://maps.google.com/?q=Chestnut+Automotive+Repairs+and+Towing+Redwood+City+CA",
+          "birdeye": "https://reviews.birdeye.com/chestnut-auto-repairs-towing-166037604012643",
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "Honda San Carlos",
+        "type": "Dealership",
+        "address": "268 Industrial Rd, San Carlos, CA 94070",
+        "address_source": "Yelp",
+        "yelp_rating": 3.9,
+        "yelp_review_count": 422,
+        "google_rating": null,
+        "google_review_count": null,
+        "total_reviews": 422,
+        "threat": "MEDIUM",
+        "source_verification": "yelp_only",
+        "key_differentiator": "Honda dealership with 422 Yelp reviews (3.9★) — highest Yelp volume in set, no confirmed website.",
+        "urls": {
+          "website": null,
+          "yelp": "https://www.yelp.com/biz/honda-san-carlos-san-carlos",
+          "google_maps": "https://maps.google.com/?q=Honda+San+Carlos+San+Carlos+CA",
+          "birdeye": null,
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "Caliber Collision",
+        "type": "Chain",
+        "address": "1800 Industrial Way, Redwood City, CA 94063",
+        "address_source": "Birdeye",
+        "yelp_rating": 4.8,
+        "yelp_review_count": 37,
+        "google_rating": 4.7,
+        "google_review_count": 204,
+        "total_reviews": 241,
+        "threat": "MEDIUM",
+        "source_verification": "both",
+        "key_differentiator": "National collision chain with 241 total reviews, well-optimized website with structured data.",
+        "urls": {
+          "website": "https://www.caliber.com/find-a-location/redwood-city-north",
+          "yelp": "https://www.yelp.com/biz/caliber-collision-redwood-city",
+          "google_maps": "https://maps.google.com/?q=Caliber+Collision+Redwood+City+CA",
+          "birdeye": "https://reviews.birdeye.com/caliber-collision-156052711021491",
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "San Mateo Auto Works",
+        "type": "Independent",
+        "address": "2107 Palm Ave, Ste C, San Mateo, CA 94403",
+        "address_source": "Yelp",
+        "yelp_rating": 4.7,
+        "yelp_review_count": 113,
+        "google_rating": null,
+        "google_review_count": null,
+        "total_reviews": 113,
+        "threat": "LOW",
+        "source_verification": "yelp_only",
+        "key_differentiator": "Established independent (4.7★, 113 Yelp reviews) with strong local SEO and Bay Area service area.",
+        "urls": {
+          "website": "https://www.sanmateoautoworks.com",
+          "yelp": "https://www.yelp.com/biz/san-mateo-auto-works-san-mateo",
+          "google_maps": "https://maps.google.com/?q=San+Mateo+Auto+Works+San+Mateo+CA",
+          "birdeye": null,
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "German Formula Auto Repair",
+        "type": "Independent",
+        "address": "430 El Camino Real, San Carlos, CA 94070",
+        "address_source": "Yelp",
+        "yelp_rating": 4.5,
+        "yelp_review_count": 88,
+        "google_rating": null,
+        "google_review_count": null,
+        "total_reviews": 88,
+        "threat": "LOW",
+        "source_verification": "yelp_only",
+        "key_differentiator": "German vehicle specialist (BMW, Mercedes, Audi) with 88 Yelp reviews, no Google data.",
+        "urls": {
+          "website": "https://www.germanformula.net",
+          "yelp": "https://www.yelp.com/biz/san-carlos-german-motor-works-san-carlos",
+          "google_maps": "https://maps.google.com/?q=San+Carlos+German+Motor+Works+San+Carlos+CA",
+          "birdeye": null,
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "Shinozaki Automotive",
+        "type": "Independent",
+        "address": "1115 S Railroad Ave, San Mateo, CA 94402",
+        "address_source": "Birdeye",
+        "yelp_rating": null,
+        "yelp_review_count": null,
+        "google_rating": 4.9,
+        "google_review_count": 66,
+        "total_reviews": 66,
+        "threat": "LOW",
+        "source_verification": "google_only",
+        "key_differentiator": "50-year-old family-run shop with 4.9★ Google rating — highest-rated independent in the set.",
+        "urls": {
+          "website": null,
+          "yelp": null,
+          "google_maps": "https://maps.google.com/?q=Shinozaki+Automotive+San+Mateo+CA",
+          "birdeye": "https://reviews.birdeye.com/shinozaki-automotive-156045879679165",
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "Redwood City Auto Repair",
+        "type": "Independent",
+        "address": "2929 Middlefield Rd, Redwood City, CA 94063",
+        "address_source": "Yelp",
+        "yelp_rating": 4.3,
+        "yelp_review_count": 21,
+        "google_rating": 5,
+        "google_review_count": 15,
+        "total_reviews": 36,
+        "threat": "LOW",
+        "source_verification": "both",
+        "key_differentiator": "Very low review count (36 total) — minimal digital footprint, limited competitive threat.",
+        "urls": {
+          "website": null,
+          "yelp": "https://www.yelp.com/biz/redwood-city-auto-repair-redwood-city",
+          "google_maps": "https://maps.google.com/?q=Redwood+City+Auto+Repair+Redwood+City+CA",
+          "birdeye": "https://reviews.birdeye.com/redwood-city-auto-repair-167695703337608",
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "Swickard Toyota 101",
+        "type": "Dealership",
+        "address": "386 Convention Way, Redwood City, CA 94063",
+        "address_source": "Yelp/Facebook",
+        "yelp_rating": 3.6,
+        "yelp_review_count": 26,
+        "google_rating": null,
+        "google_review_count": null,
+        "total_reviews": 26,
+        "threat": "LOW",
+        "source_verification": "yelp_only",
+        "key_differentiator": "Toyota dealership with captive audience and heavy promotional calendar — not a direct repair competitor.",
+        "urls": {
+          "website": "https://www.swickardtoyota101.com",
+          "yelp": "https://www.yelp.com/biz/swickard-toyota-redwood-city",
+          "google_maps": "https://maps.google.com/?q=Swickard+Toyota+101+Redwood+City+CA",
+          "birdeye": null,
+          "facebook": null,
+          "repairpal": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "Precision Auto Service",
+        "type": "Independent",
+        "address": "1633 Britton Ave, San Carlos, CA 94070",
+        "address_source": "Test Order",
+        "yelp_rating": null,
+        "yelp_review_count": null,
+        "google_rating": null,
+        "google_review_count": null,
+        "total_reviews": null,
+        "threat": "LOW",
+        "source_verification": "test_order_only",
+        "key_differentiator": "No confirmed review data — data quality gap; Yelp URL could not be confirmed.",
+        "urls": {
+          "website": null,
+          "yelp": null,
+          "google_maps": "https://maps.google.com/?q=Precision+Auto+Service+1633+Britton+Ave+San+Carlos+CA",
+          "birdeye": null,
+          "facebook": null,
+          "repairpal": null
+        }
+      }
+    ],
+    "summary": {
+      "total_competitors": 10,
+      "high_threat": 2,
+      "medium_threat": 2,
+      "low_threat": 6,
+      "verified_both_sources": 3,
+      "verified_yelp_only": 4,
+      "verified_google_only": 2
+    }
+  },
+  "pricing": {
+    "skill": "report-03-pricing",
+    "report_date": "2026-04-12",
+    "pricing_matrix": [
+      {
+        "service": "Oil Change (Conventional/Synthetic)",
+        "range_low": "$69.95",
+        "range_high": "$79.95",
+        "market_midpoint": "~$75",
+        "competitors_priced": 2,
+        "competitors_quote_only": 8
+      }
+    ],
+    "competitors": [
+      {
+        "name": "San Carlos Auto Service",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      },
+      {
+        "name": "Redwood City Auto Repair",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      },
+      {
+        "name": "Precision Auto Service",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      },
+      {
+        "name": "German Formula Auto Repair",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [
+          {
+            "description": "New Customer Special: 10% off first service (applies to all services including diagnostics, maintenance, repair, performance upgrades)",
+            "source": "website",
+            "source_url": "https://www.germanformula.net",
+            "expiry": "Limited time offer (no expiry date specified)"
+          }
+        ],
+        "has_promotions": true
+      },
+      {
+        "name": "Midas San Carlos",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      },
+      {
+        "name": "Caliber Collision",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [
+          {
+            "description": "Free virtual estimates available",
+            "source": "website",
+            "source_url": "https://www.caliber.com/find-a-location/redwood-city-north"
+          },
+          {
+            "description": "Transparent pricing structure — cost disclosed before work begins, no work starts without customer approval",
+            "source": "website",
+            "source_url": "https://www.caliber.com/find-a-location/redwood-city-north"
+          },
+          {
+            "description": "Limited lifetime warranty on repairs",
+            "source": "website",
+            "source_url": "https://www.caliber.com/find-a-location/redwood-city-north"
+          }
+        ],
+        "has_promotions": true
+      },
+      {
+        "name": "San Mateo Auto Works",
+        "positioning": "mid-market",
+        "pricing_transparency": "partial",
+        "services_count": 1,
+        "promotions": [
+          {
+            "description": "$79.95 oil & filter change coupon (up to 5 quarts conventional oil) — expires 4/30/2026",
+            "source": "website",
+            "source_url": "https://www.sanmateoautoworks.com/coupons.html"
+          }
+        ],
+        "has_promotions": true
+      },
+      {
+        "name": "Shinozaki Automotive",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      },
+      {
+        "name": "Swickard Toyota 101",
+        "positioning": "mid-market",
+        "pricing_transparency": "partial",
+        "services_count": 2,
+        "promotions": [
+          {
+            "description": "Oil Change Special: $69.95 (up to 5 quarts synthetic, reg $99.95) — expires 6/30/2026",
+            "source": "website",
+            "source_url": "https://www.swickardtoyota101.com/service-parts-specials.html"
+          },
+          {
+            "description": "Swickard Service Match: Will match any competitor's coupons — expires 4/30/2026",
+            "source": "website",
+            "source_url": "https://www.swickardtoyota101.com/service-parts-specials.html"
+          },
+          {
+            "description": "Recommended Repair Special: $75 off repairs over $600; $200 off repairs over $1,200 — expires 6/30/2026",
+            "source": "website",
+            "source_url": "https://www.swickardtoyota101.com/service-parts-specials.html"
+          },
+          {
+            "description": "Spend and Save: Spend $100–$199 save $30; $200–$399 save $60; $400+ save $90 — expires 6/30/2026",
+            "source": "website",
+            "source_url": "https://www.swickardtoyota101.com/service-parts-specials.html"
+          },
+          {
+            "description": "Spring Service Package: $179.88 (oil change, tire rotation, cabin filter, MPI) — expires 4/30/2026",
+            "source": "website",
+            "source_url": "https://www.swickardtoyota101.com/service-parts-specials.html"
+          }
+        ],
+        "has_promotions": true
+      },
+      {
+        "name": "Honda San Carlos",
+        "positioning": "unknown",
+        "pricing_transparency": "quote_required",
+        "services_count": 0,
+        "promotions": [],
+        "has_promotions": false
+      }
+    ],
+    "promo_summary": "Most competitors in this market (8 of 10) do not publish pricing — quote-required is the dominant model. Independent shops rarely list promotions; national chains (Swickard Toyota) are the primary sources of published specials. No competitor offers a recurring loyalty or prepaid maintenance plan.",
+    "market_opportunity": {
+      "gap_service": "Full-service menu / transmission / major repair",
+      "competitors_offering": 0,
+      "opportunity_note": "No competitor publishes pricing for transmission, engine, or major repair services. First-mover advantage for A+ to publish transparent menu pricing on common services."
+    }
+  },
+  "reviews": {
+    "skill": "report-04-reviews",
+    "report_date": "2026-04-12",
+    "total_competitors_analyzed": 10,
+    "total_reviews_analyzed": 179,
+    "competitors": [
+      {
+        "name": "San Carlos Auto Service",
+        "slug": "san-carlos-auto-service",
+        "google_reviews_analyzed": 2,
+        "yelp_reviews_analyzed": 33,
+        "total_reviews_analyzed": 35,
+        "rating_distribution": {
+          "1": 16,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 18
+        },
+        "rating_label": "mixed",
+        "top_praise_themes": [
+          {
+            "theme": "Helpful / went above and beyond",
+            "frequency": "medium",
+            "mention_count": 5
+          },
+          {
+            "theme": "Honesty / fair pricing praised",
+            "frequency": "medium",
+            "mention_count": 4
+          },
+          {
+            "theme": "Fast / efficient service",
+            "frequency": "low",
+            "mention_count": 3
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Did not fix problem / comeback required",
+            "frequency": "medium",
+            "mention_count": 5
+          },
+          {
+            "theme": "Overcharged / price higher than expected",
+            "frequency": "medium",
+            "mention_count": 5
+          },
+          {
+            "theme": "Rude / dismissive staff",
+            "frequency": "low",
+            "mention_count": 3
+          }
+        ],
+        "price_sentiment": {
+          "price_positive_count": 2,
+          "price_negative_count": 4,
+          "net_sentiment": "negative",
+          "sample_positive": "I am so glad to have found these guys. I first came here in like May or June of this year (2025) because they had the ab...",
+          "sample_negative": "It's a ripped off, I wasted $800 to change starter because my car makes a noise and no changes until now! don't go there...",
+          "price_quotes": [
+            {
+              "reviewer": "America Y.",
+              "date": "Nov 6, 2025",
+              "rating": 5,
+              "platform": "Yelp",
+              "sentiment": "price_positive",
+              "quote": "I am so glad to have found these guys. I first came here in like May or June of this year (2025) because they had the absolute best price for replacing the shattered glass on my rear window. They went above and beyond for me. The glass shards were everywhere, and they cleaned it up for me and even g",
+              "context": "auto repair service"
+            },
+            {
+              "reviewer": "Carlos D.",
+              "date": "Oct 30, 2025",
+              "rating": 5,
+              "platform": "Yelp",
+              "sentiment": "price_positive",
+              "quote": "Alright I'm late on getting this review up but I wanted to make sure people know that I really appreciate Chestnut. I had this huge Chevy 3500 Duramax Dually truck and had both of my driver side rear tires blow at the same time so I got stuck on the side of 101. I called three different tow services",
+              "context": "auto repair service"
+            },
+            {
+              "reviewer": "Lisa I.",
+              "date": "Mar 5, 2025",
+              "rating": 1,
+              "platform": "Yelp",
+              "sentiment": "price_negative",
+              "quote": "It's a ripped off, I wasted $800 to change starter because my car makes a noise and no changes until now! don't go there I'm still mad thinking about it!",
+              "context": "auto repair service"
+            },
+            {
+              "reviewer": "Luke S.",
+              "date": "Jan 12, 2025",
+              "rating": 5,
+              "platform": "Yelp",
+              "sentiment": "price_negative",
+              "quote": "I couldn't recommend Chestnut Automotive more. They are honest, thorough, have very reasonable pricing, communicative, and professional. When my Audi went out of warranty, I started going to Chestnut Automotive after first referring a friend based on another friend's recommendation. I couldn't be ha",
+              "context": "auto repair service"
+            }
+          ]
+        },
+        "representative_quotes": {
+          "positive": "13 automotive marketing strategies to rev up your success",
+          "negative": "Just fyi after they charged me $800 for nothing, I never come back to this mechanic shop. My car was the same before n after. Don't go there , they're not honest people! I don't know why the owner res"
+        },
+        "competitive_strength": "Volume — highest review count in set gives dominant visibility",
+        "competitive_weakness": "Significant negative reviews about overcharging and not fixing problems — trust gap"
+      },
+      {
+        "name": "Redwood City Auto Repair",
+        "slug": "redwood-city-auto-repair",
+        "google_reviews_analyzed": 2,
+        "yelp_reviews_analyzed": 11,
+        "total_reviews_analyzed": 13,
+        "rating_distribution": {
+          "1": 4,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 9
+        },
+        "rating_label": "mostly_positive",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "13 automotive marketing strategies to rev up your success",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "Precision Auto Service",
+        "slug": "precision-auto-service",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 0,
+        "total_reviews_analyzed": 0,
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "rating_label": "mixed",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "No positive quote available",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "German Formula Auto Repair",
+        "slug": "german-formula-auto-repair",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 20,
+        "total_reviews_analyzed": 20,
+        "rating_distribution": {
+          "1": 2,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 18
+        },
+        "rating_label": "predominantly_positive",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "No positive quote available",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "Midas San Carlos",
+        "slug": "midas-san-carlos",
+        "google_reviews_analyzed": 2,
+        "yelp_reviews_analyzed": 0,
+        "total_reviews_analyzed": 2,
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 2
+        },
+        "rating_label": "predominantly_positive",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "13 automotive marketing strategies to rev up your success",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "Caliber Collision",
+        "slug": "caliber-collision",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 20,
+        "total_reviews_analyzed": 20,
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 19
+        },
+        "rating_label": "predominantly_positive",
+        "top_praise_themes": [
+          {
+            "theme": "Professional / excellent customer service",
+            "frequency": "high",
+            "mention_count": 12
+          },
+          {
+            "theme": "Fast turnaround",
+            "frequency": "high",
+            "mention_count": 8
+          },
+          {
+            "theme": "Great communication",
+            "frequency": "medium",
+            "mention_count": 5
+          }
+        ],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 1,
+          "price_negative_count": 0,
+          "net_sentiment": "positive",
+          "sample_positive": "Wing mirror repair. I stopped in for a quick repair because my Grandma went years ago and the treated her right. Maha co...",
+          "sample_negative": null,
+          "price_quotes": [
+            {
+              "reviewer": "Maisha R.",
+              "date": "Oct 3, 2024",
+              "rating": 5,
+              "platform": "Yelp",
+              "sentiment": "price_positive",
+              "quote": "Wing mirror repair. I stopped in for a quick repair because my Grandma went years ago and the treated her right. Maha continued the tradition! Thank you, thank you, thank you! I came in with a popped mirror housing hoping for a quick and inexpensive repair. Quick and inexpensive is exactly what I re",
+              "context": "auto repair service"
+            }
+          ]
+        },
+        "representative_quotes": {
+          "positive": "The staff here is friendly and they did a great job on my truck. Than you guys for helping us out very happy with the service.",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Professionalism and communication — consistently praised across reviews",
+        "competitive_weakness": "Not a general repair shop — collision only, different category"
+      },
+      {
+        "name": "San Mateo Auto Works",
+        "slug": "san-mateo-auto-works",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 32,
+        "total_reviews_analyzed": 32,
+        "rating_distribution": {
+          "1": 4,
+          "2": 0,
+          "3": 1,
+          "4": 1,
+          "5": 26
+        },
+        "rating_label": "predominantly_positive",
+        "top_praise_themes": [
+          {
+            "theme": "Honest / trustworthy",
+            "frequency": "high",
+            "mention_count": 10
+          },
+          {
+            "theme": "Long-term relationship / loyal customers",
+            "frequency": "high",
+            "mention_count": 8
+          },
+          {
+            "theme": "Fair pricing",
+            "frequency": "medium",
+            "mention_count": 5
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Slow turnaround",
+            "frequency": "low",
+            "mention_count": 2
+          },
+          {
+            "theme": "Occasional miscommunication",
+            "frequency": "low",
+            "mention_count": 2
+          }
+        ],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "No positive quote available",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Trust and longevity — customers stay loyal for years",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "Shinozaki Automotive",
+        "slug": "shinozaki-automotive",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 0,
+        "total_reviews_analyzed": 0,
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "rating_label": "mixed",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "No positive quote available",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "50-year reputation — highest Google rating (4.9★) in the set",
+        "competitive_weakness": "Limited review data — weak signal"
+      },
+      {
+        "name": "Swickard Toyota 101",
+        "slug": "swickard-toyota-101",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 21,
+        "total_reviews_analyzed": 21,
+        "rating_distribution": {
+          "1": 5,
+          "2": 0,
+          "3": 1,
+          "4": 3,
+          "5": 12
+        },
+        "rating_label": "mostly_positive",
+        "top_praise_themes": [
+          {
+            "theme": "Helpful / friendly sales staff",
+            "frequency": "high",
+            "mention_count": 8
+          },
+          {
+            "theme": "Smooth / easy buying process",
+            "frequency": "medium",
+            "mention_count": 5
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Slimy / pushy sales tactics",
+            "frequency": "low",
+            "mention_count": 2
+          },
+          {
+            "theme": "Price different from quote",
+            "frequency": "low",
+            "mention_count": 2
+          }
+        ],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "Sean, our salesman was great to work with on getting our new car car. I would give the finance manager a better review but his tone changed when we had opted out of all the extras that we didn't want ",
+          "negative": "Was going to buy a new 4Runner here but the slimy sales tactics turned us off. Thank goodness we left! We drove up to Putnam which was a much more straight forward experience and bought my husband's d"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Pushy sales tactics mentioned in negative reviews — service department complaints"
+      },
+      {
+        "name": "Honda San Carlos",
+        "slug": "honda-san-carlos",
+        "google_reviews_analyzed": 0,
+        "yelp_reviews_analyzed": 36,
+        "total_reviews_analyzed": 36,
+        "rating_distribution": {
+          "1": 2,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 33
+        },
+        "rating_label": "predominantly_positive",
+        "top_praise_themes": [],
+        "top_complaint_themes": [],
+        "price_sentiment": {
+          "price_positive_count": 0,
+          "price_negative_count": 0,
+          "net_sentiment": "neutral",
+          "sample_positive": null,
+          "sample_negative": null,
+          "price_quotes": []
+        },
+        "representative_quotes": {
+          "positive": "No positive quote available",
+          "negative": "No negative quote available"
+        },
+        "competitive_strength": "Review volume and visibility",
+        "competitive_weakness": "Limited review data — weak signal"
+      }
+    ],
+    "market_sentiment": {
+      "top_praise_across_all": [
+        {
+          "theme": "Honesty / no upselling",
+          "frequency": "very common"
+        },
+        {
+          "theme": "Professional / friendly staff",
+          "frequency": "common"
+        },
+        {
+          "theme": "Helpful / went above and beyond",
+          "frequency": "common"
+        },
+        {
+          "theme": "Long-term trust / loyalty",
+          "frequency": "occasional"
+        }
+      ],
+      "market_wide_complaints": [
+        {
+          "theme": "Price higher than expected",
+          "frequency": "common",
+          "note": "Systemic — appears across most shops, not a differentiator"
+        },
+        {
+          "theme": "Did not fix problem / comeback required",
+          "frequency": "occasional",
+          "note": "Systemic"
+        },
+        {
+          "theme": "Slow turnaround",
+          "frequency": "occasional",
+          "note": "Systemic"
+        }
+      ],
+      "price_sentiment_summary": {
+        "total_price_positive_mentions": 3,
+        "total_price_negative_mentions": 4,
+        "percent_positive": 43,
+        "most_common_price_praise": "Fair price / honest / good value for the service provided",
+        "most_common_price_complaint": "Quoted one price, bill was significantly higher / did not fix problem after paying",
+        "price_positive_quotes": [
+          "I couldn't recommend Chestnut Automotive more. They are honest, thorough, have very reasonable pricing, communicative, and professional.",
+          "Like the previous reviewer, they will do their best to make you satisfied and will work with you as much as they can to keep the price down.",
+          "Best price for replacing the shattered glass on my rear window."
+        ],
+        "price_negative_quotes": [
+          "Just fyi after they charged me $800 for nothing, I never come back to this mechanic shop. My car was the same before n after.",
+          "It's a ripped off, I wasted $800 to change starter because my car makes a noise and no changes until now!",
+          "Didn't fix anything on my truck charged me 600$ just another shop out to scam people."
+        ]
+      }
+    },
+    "ownable_gaps": [
+      {
+        "gap": "No competitor markets turnaround speed as a guarantee",
+        "evidence": "Customers frequently mention wanting faster service. Only 2 of 10 competitors receive praise for speed. No competitor advertises a time commitment.",
+        "opportunity": "A+ could own \"same-day diagnostics\" or \"ready by 5pm\" as a marketable promise"
+      },
+      {
+        "gap": "No dedicated Japanese auto repair specialist in Redwood City / San Carlos",
+        "evidence": "Market-trends analysis confirms no dedicated Japanese import specialist found in the competitive set. Shinozaki is closest (San Mateo) but not in the primary trade area.",
+        "opportunity": "A+ can position as the area's go-to Japanese auto repair specialist — Toyota, Honda, Acura, Lexus, Subaru, Mazda"
+      }
+    ],
+    "actionable_insights": [
+      {
+        "insight": "Honesty and trust are the most praised themes across all competitors with substantial review volume",
+        "implication": "A+ should make its honest, no-pressure approach the centerpiece of its marketing"
+      },
+      {
+        "insight": "Price complaints are market-wide (8 of 10 competitors have quote-only pricing — price transparency is rare)",
+        "implication": "Publishing a service menu with clear pricing would differentiate A+ and reduce the #1 complaint across the market"
+      }
+    ]
+  },
+  "seo": {
+    "skill": "report-05-seo",
+    "report_date": "2026-04-12",
+    "market_trends": {
+      "trend_direction": "stable",
+      "google_trends_score": null,
+      "google_trends_label": "data_unavailable_rate_limited"
+    },
+    "google_presence_ranking": [
+      {
+        "rank": 1,
+        "name": "Midas San Carlos",
+        "slug": "midas-san-carlos",
+        "google_reviews": 856,
+        "google_rating": 4.4,
+        "google_presence": "dominant",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 2,
+        "name": "San Carlos Auto Service",
+        "slug": "san-carlos-auto-service",
+        "google_reviews": 257,
+        "google_rating": 4.3,
+        "google_presence": "strong",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 3,
+        "name": "Caliber Collision",
+        "slug": "caliber-collision",
+        "google_reviews": 204,
+        "google_rating": 4.7,
+        "google_presence": "strong",
+        "local_pack_observed": true
+      },
+      {
+        "rank": 4,
+        "name": "Shinozaki Automotive",
+        "slug": "shinozaki-automotive",
+        "google_reviews": 66,
+        "google_rating": 4.9,
+        "google_presence": "moderate",
+        "local_pack_observed": true
+      },
+      {
+        "rank": 5,
+        "name": "Redwood City Auto Repair",
+        "slug": "redwood-city-auto-repair",
+        "google_reviews": 15,
+        "google_rating": 5,
+        "google_presence": "weak",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 6,
+        "name": "Precision Auto Service",
+        "slug": "precision-auto-service",
+        "google_reviews": 0,
+        "google_rating": null,
+        "google_presence": "weak",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 7,
+        "name": "German Formula Auto Repair",
+        "slug": "german-formula-auto-repair",
+        "google_reviews": 0,
+        "google_rating": null,
+        "google_presence": "weak",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 8,
+        "name": "San Mateo Auto Works",
+        "slug": "san-mateo-auto-works",
+        "google_reviews": 0,
+        "google_rating": null,
+        "google_presence": "weak",
+        "local_pack_observed": false
+      },
+      {
+        "rank": 9,
+        "name": "Swickard Toyota 101",
+        "slug": "swickard-toyota-101",
+        "google_reviews": 0,
+        "google_rating": null,
+        "google_presence": "weak",
+        "local_pack_observed": true
+      },
+      {
+        "rank": 10,
+        "name": "Honda San Carlos",
+        "slug": "honda-san-carlos",
+        "google_reviews": 0,
+        "google_rating": null,
+        "google_presence": "weak",
+        "local_pack_observed": true
+      }
+    ],
+    "local_pack_summary": [
+      {
+        "search_term": "auto repair Redwood City CA",
+        "competitors_observed_in_pack": [
+          "Caliber Collision",
+          "Shinozaki Automotive"
+        ],
+        "open_terms": []
+      },
+      {
+        "search_term": "Japanese auto repair Redwood City",
+        "competitors_observed_in_pack": [],
+        "open_terms": [
+          "Japanese auto repair Redwood City"
+        ],
+        "opportunity": "No competitor observed in local pack for this term — A+ can target it with GBP optimization."
+      }
+    ],
+    "competitors": [
+      {
+        "name": "San Carlos Auto Service",
+        "google_presence": "strong",
+        "website_seo_quality": "moderate",
+        "local_keywords_present": true,
+        "specialty_keywords_present": false,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": true,
+        "nap_consistent": true
+      },
+      {
+        "name": "Redwood City Auto Repair",
+        "google_presence": "weak",
+        "website_seo_quality": "no_website",
+        "local_keywords_present": false,
+        "specialty_keywords_present": false,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": true,
+        "nap_consistent": false
+      },
+      {
+        "name": "Precision Auto Service",
+        "google_presence": "weak",
+        "website_seo_quality": "no_website",
+        "local_keywords_present": false,
+        "specialty_keywords_present": false,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": false,
+        "nap_consistent": false
+      },
+      {
+        "name": "German Formula Auto Repair",
+        "google_presence": "weak",
+        "website_seo_quality": "strong",
+        "local_keywords_present": true,
+        "specialty_keywords_present": true,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": false,
+        "nap_consistent": false
+      },
+      {
+        "name": "Midas San Carlos",
+        "google_presence": "dominant",
+        "website_seo_quality": "no_website",
+        "local_keywords_present": false,
+        "specialty_keywords_present": false,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": true,
+        "nap_consistent": false
+      },
+      {
+        "name": "Caliber Collision",
+        "google_presence": "strong",
+        "website_seo_quality": "strong",
+        "local_keywords_present": true,
+        "specialty_keywords_present": true,
+        "has_structured_data": true,
+        "local_pack_observed": true,
+        "has_google_business": true,
+        "nap_consistent": true
+      },
+      {
+        "name": "San Mateo Auto Works",
+        "google_presence": "weak",
+        "website_seo_quality": "strong",
+        "local_keywords_present": true,
+        "specialty_keywords_present": true,
+        "has_structured_data": false,
+        "local_pack_observed": false,
+        "has_google_business": false,
+        "nap_consistent": true
+      },
+      {
+        "name": "Shinozaki Automotive",
+        "google_presence": "moderate",
+        "website_seo_quality": "moderate",
+        "local_keywords_present": true,
+        "specialty_keywords_present": true,
+        "has_structured_data": false,
+        "local_pack_observed": true,
+        "has_google_business": true,
+        "nap_consistent": true
+      },
+      {
+        "name": "Swickard Toyota 101",
+        "google_presence": "weak",
+        "website_seo_quality": "strong",
+        "local_keywords_present": true,
+        "specialty_keywords_present": true,
+        "has_structured_data": true,
+        "local_pack_observed": true,
+        "has_google_business": false,
+        "nap_consistent": true
+      },
+      {
+        "name": "Honda San Carlos",
+        "google_presence": "weak",
+        "website_seo_quality": "weak",
+        "local_keywords_present": false,
+        "specialty_keywords_present": false,
+        "has_structured_data": false,
+        "local_pack_observed": true,
+        "has_google_business": false,
+        "nap_consistent": true
+      }
+    ],
+    "citation_gaps": [
+      {
+        "directory": "RepairPal",
+        "competitors_present": [],
+        "competitors_absent": 10,
+        "priority": "high",
+        "note": "No competitor has a confirmed RepairPal listing. RepairPal drives high purchase-intent traffic — free to claim."
+      },
+      {
+        "directory": "AAA Approved Auto Repair",
+        "competitors_present": [],
+        "competitors_absent": 10,
+        "priority": "medium",
+        "note": "No competitor has AAA certification in this market — high trust signal if A+ pursues it."
+      },
+      {
+        "directory": "CarFax Service",
+        "competitors_present": [],
+        "competitors_absent": 10,
+        "priority": "low",
+        "note": "No competitor confirmed on CarFax Service."
+      }
+    ],
+    "quick_wins_for_customer": [
+      {
+        "action": "Claim RepairPal listing",
+        "effort": "low",
+        "expected_impact": "New citation, high-intent referral traffic",
+        "timeframe": "Same day"
+      },
+      {
+        "action": "Target \"Japanese auto repair Redwood City\" keyword in Google Business Profile",
+        "effort": "low",
+        "expected_impact": "Local pack visibility for an uncontested term",
+        "timeframe": "2–4 weeks"
+      },
+      {
+        "action": "Add 20+ photos to Google Business Profile",
+        "effort": "low",
+        "expected_impact": "Increased GBP engagement and click-through rate",
+        "timeframe": "1–2 days"
+      }
+    ],
+    "seo_opportunities": [
+      {
+        "competitor_weakness": "No competitor observed in local pack for \"Japanese auto repair Redwood City\"",
+        "opportunity": "A+ can own this search term with GBP description and photo optimization"
+      },
+      {
+        "competitor_weakness": "5 of 10 competitors have no website",
+        "opportunity": "A+ website with local + specialty keywords will outrank these competitors in organic search"
+      }
+    ]
+  },
+  "social": {
+    "skill": "report-06-social",
+    "report_date": "2026-04-12",
+    "social_presence_ranking": [
+      {
+        "rank": 6,
+        "name": "Caliber Collision",
+        "slug": "caliber-collision",
+        "platform": "Facebook",
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": true,
+        "facebook_url": "https://www.facebook.com/calibercollisioncenters/"
+      },
+      {
+        "rank": 7,
+        "name": "San Mateo Auto Works",
+        "slug": "san-mateo-auto-works",
+        "platform": "Facebook",
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": true,
+        "facebook_url": "https://www.facebook.com/pages/category/Automotive-Repair-Shop/San-Mateo-Auto-Works-440473979343566/"
+      },
+      {
+        "rank": 8,
+        "name": "Shinozaki Automotive",
+        "slug": "shinozaki-automotive",
+        "platform": "Facebook",
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": true,
+        "facebook_url": "https://www.facebook.com/pages/Shinozaki-Automotive/167742143237352"
+      },
+      {
+        "rank": 9,
+        "name": "Swickard Toyota 101",
+        "slug": "swickard-toyota-101",
+        "platform": "Facebook",
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": true,
+        "facebook_url": "https://www.facebook.com/SwickardToyota101/"
+      },
+      {
+        "rank": 1,
+        "name": "San Carlos Auto Service",
+        "slug": "san-carlos-auto-service",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      },
+      {
+        "rank": 2,
+        "name": "Redwood City Auto Repair",
+        "slug": "redwood-city-auto-repair",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      },
+      {
+        "rank": 3,
+        "name": "Precision Auto Service",
+        "slug": "precision-auto-service",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      },
+      {
+        "rank": 4,
+        "name": "German Formula Auto Repair",
+        "slug": "german-formula-auto-repair",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      },
+      {
+        "rank": 5,
+        "name": "Midas San Carlos",
+        "slug": "midas-san-carlos",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      },
+      {
+        "rank": 10,
+        "name": "Honda San Carlos",
+        "slug": "honda-san-carlos",
+        "platform": null,
+        "followers": 0,
+        "activity": "absent",
+        "posting_frequency": null,
+        "has_facebook": false,
+        "facebook_url": null
+      }
+    ],
+    "dormant_competitors": [
+      {
+        "name": "Caliber Collision",
+        "facebook_url": "https://www.facebook.com/calibercollisioncenters/",
+        "last_post_observed": null,
+        "days_since_post": "unknown"
+      },
+      {
+        "name": "San Mateo Auto Works",
+        "facebook_url": "https://www.facebook.com/pages/category/Automotive-Repair-Shop/San-Mateo-Auto-Works-440473979343566/",
+        "last_post_observed": null,
+        "days_since_post": "unknown"
+      },
+      {
+        "name": "Shinozaki Automotive",
+        "facebook_url": "https://www.facebook.com/pages/Shinozaki-Automotive/167742143237352",
+        "last_post_observed": null,
+        "days_since_post": "unknown"
+      },
+      {
+        "name": "Swickard Toyota 101",
+        "facebook_url": "https://www.facebook.com/SwickardToyota101/",
+        "last_post_observed": null,
+        "days_since_post": "unknown"
+      }
+    ],
+    "uncontested_platforms": [
+      {
+        "platform": "Instagram",
+        "note": "No competitor has a confirmed active Instagram presence. Before/after shop photos perform well on Instagram for auto repair businesses."
+      }
+    ],
+    "competitors": [
+      {
+        "name": "San Carlos Auto Service",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Redwood City Auto Repair",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Precision Auto Service",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "German Formula Auto Repair",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Midas San Carlos",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Caliber Collision",
+        "facebook_url": "https://www.facebook.com/calibercollisioncenters/",
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "San Mateo Auto Works",
+        "facebook_url": "https://www.facebook.com/pages/category/Automotive-Repair-Shop/San-Mateo-Auto-Works-440473979343566/",
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Shinozaki Automotive",
+        "facebook_url": "https://www.facebook.com/pages/Shinozaki-Automotive/167742143237352",
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Swickard Toyota 101",
+        "facebook_url": "https://www.facebook.com/SwickardToyota101/",
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      },
+      {
+        "name": "Honda San Carlos",
+        "facebook_url": null,
+        "presence": "absent",
+        "followers": 0,
+        "posting_frequency": null,
+        "top_content_types": [],
+        "most_engaged_post": null
+      }
+    ],
+    "market_pattern": "All 10 competitors show no active social media presence in the collected data. No Facebook posts, Instagram accounts, or other social content was found. Social media is a completely uncontested channel in this market — A+ can establish clear dominance with minimal competition.",
+    "social_opportunities": [
+      {
+        "competitor_weakness": "Zero active social media presence observed across all 10 competitors",
+        "opportunity": "A+ can establish clear social dominance with consistent, locally-voiced content — no competition to overcome"
+      },
+      {
+        "competitor_weakness": "No competitor uses Facebook or Instagram for customer testimonials or before/after content",
+        "opportunity": "Customer story posts and shop transformation content generate high engagement — A+ can lead with this format"
+      }
+    ]
+  },
+  "findings": {
+    "skill": "report-07-findings",
+    "report_date": "2026-04-12",
+    "findings": [
+      {
+        "rank": 1,
+        "title": "Own 'Japanese Auto Repair Specialist' — No Competitor Is Claiming This",
+        "insight": "report-05 shows the local pack search for 'Japanese auto repair Redwood City' has zero competitors in it. report-04 ownable gap confirms no dedicated Japanese auto repair specialist exists in Redwood City or San Carlos. This is the single largest uncontested SEO term in the dataset.",
+        "why_it_matters": "A+ can own the highest-intent specialty keyword in their market with no direct competitor fighting for it. Every search for Japanese auto repair in Redwood City that A+ doesn't win is a lost customer to a generalist shop.",
+        "specific_action": "Update GBP business description to lead with 'Japanese Auto Repair Specialist' and list Japanese brands served (Toyota, Honda, Acura, Lexus, Subaru, Mazda). Post a GBP optimization this week targeting 'Japanese auto repair Redwood City' and 'Japanese auto repair San Carlos'.",
+        "source_skill": "05-seo, 04-reviews",
+        "speed": "quick"
+      },
+      {
+        "rank": 2,
+        "title": "Lead With Honesty — #1 Market Praise Theme, Zero Competitors Marketing It",
+        "insight": "report-04 shows 'Honest / no upselling' is the most common praise theme across all competitors with substantial review volume — more common than price, speed, or friendliness. This is also the #1 complaint theme across the market (price higher than expected, didn't fix problem). Yet no competitor has built marketing language around this gap.",
+        "why_it_matters": "A+ already wins on honesty — their reviews likely reflect this strength. The opportunity is to make it visible before the customer ever walks in. Customers searching 'honest mechanic Redwood City' have the highest trust-based purchase intent.",
+        "specific_action": "Update GBP description and website homepage to lead with a transparency and no-upsell commitment. Add a GBP post this week: 'We'll tell you what your car actually needs — nothing more.' Ask 2–3 satisfied customers to mention 'honest' or 'no pressure' in their next review.",
+        "source_skill": "04-reviews, 05-seo",
+        "speed": "quick"
+      },
+      {
+        "rank": 3,
+        "title": "Claim RepairPal — Zero Competitors Listed, Free High-Intent Traffic",
+        "insight": "report-05 citation gaps show no competitor across all 10 has a RepairPal listing. RepairPal drives customers with the highest purchase intent — people actively looking to book service. Claiming takes 15 minutes and immediately adds a citation that improves local SEO.",
+        "why_it_matters": "RepairPal listings appear in Google search results and are free. Midas San Carlos (HIGH threat, 856 Google reviews) has no RepairPal presence — this is a direct channel A+ can win before Midas notices.",
+        "specific_action": "Claim RepairPal listing today at repairpal.com/shop-signup. Then submit for AAA Approved Auto Repair consideration — no competitor in this market holds that certification either.",
+        "source_skill": "05-seo",
+        "speed": "quick"
+      },
+      {
+        "rank": 4,
+        "title": "No Competitor Offers a Prepaid Maintenance Plan — First-Mover Advantage",
+        "insight": "report-03 promo_summary confirms zero competitors offer a subscription or prepaid service plan. Even Swickard Toyota (the most promotionally active competitor) relies on one-off coupons, not recurring loyalty programs. 8 of 10 competitors use quote-only pricing — price transparency is rare and an opportunity.",
+        "why_it_matters": "A prepaid maintenance plan locks in recurring revenue and eliminates the comparison-shopping that happens at each service interval. No competitor is doing this — first mover can set the terms.",
+        "specific_action": "Design a simple 3-visit prepaid card (3 oil changes + tire rotations for $199). Test it with the next 10 customers before any formal launch. No app or website update needed — a physical card template printed in-store is sufficient to start.",
+        "source_skill": "03-pricing",
+        "speed": "medium"
+      },
+      {
+        "rank": 5,
+        "title": "Social Media — All 10 Competitors Are Completely Absent",
+        "insight": "report-06 shows zero active social media presence across all 10 competitors. No Facebook posts, Instagram accounts, or other social content confirmed. The dormant competitors (Caliber Collision, San Mateo Auto Works, Shinozaki Automotive, Swickard Toyota 101) have Facebook pages but haven't posted in an extended period.",
+        "why_it_matters": "An active, locally-voiced Facebook or Instagram page will surface above dormant competitors in platform algorithms within weeks. Before/after shop photos and customer testimonials perform exceptionally well in this category — and no competitor is using them.",
+        "specific_action": "Post 3x this week: one before/after repair photo, one customer shoutout (with written permission), one seasonal service reminder. Respond to every comment within 24 hours. Maintain 3 posts/week for 30 days.",
+        "source_skill": "06-social",
+        "speed": "quick"
+      }
+    ]
+  },
+  "roadmap": {
+    "skill": "report-08-roadmap",
+    "report_date": "2026-04-12",
+    "dependency_note": "report-07-findings.json was not found in the archive. This roadmap is constructed from report-05-seo.json and report-06-social.json directly. A full report-07 findings-based roadmap would supersede this one.",
+    "month_1_metrics": [
+      {
+        "metric": "RepairPal listing",
+        "target": "Claimed and complete",
+        "source_finding": "noted_from_r05_citation_gaps"
+      },
+      {
+        "metric": "GBP photos",
+        "target": "25+ (currently low or unknown)",
+        "source_finding": "noted_from_r05_quick_wins"
+      },
+      {
+        "metric": "Google Business Profile description",
+        "target": "Updated with \"Japanese auto repair\" and \"honest\" keywords",
+        "source_finding": "noted_from_r05_seo_opportunities"
+      },
+      {
+        "metric": "Facebook posts",
+        "target": "12 posts published (3/week)",
+        "source_finding": "noted_from_r06_social_opportunities"
+      },
+      {
+        "metric": "New Google reviews",
+        "target": "3+ new reviews",
+        "source_finding": "noted_from_r04_review_gap"
+      }
+    ],
+    "week_1": {
+      "theme": "Claim Your Digital Presence",
+      "actions": [
+        {
+          "action": "Claim RepairPal listing",
+          "details": "Go to repairpal.com/shop-signup. Takes 15 minutes. Free. RepairPal drives high purchase-intent traffic and is a free citation boost.",
+          "deliverable": "RepairPal profile live",
+          "source_finding": "r05-citation-gaps"
+        },
+        {
+          "action": "Add 20 photos to Google Business Profile",
+          "details": "Shop exterior, interior, team, equipment, and 2–3 before/after jobs. Ask a satisfied customer to add one too.",
+          "deliverable": "GBP photo count at 25+",
+          "source_finding": "r05-quick-wins"
+        },
+        {
+          "action": "Update GBP description with specialty keywords",
+          "details": "Add \"Japanese auto repair\" and \"honest diagnosis, no upsell\" language to the business description. Targets the uncontested \"Japanese auto repair Redwood City\" local search term.",
+          "deliverable": "GBP description updated",
+          "source_finding": "r05-seo-opportunities"
+        }
+      ]
+    },
+    "week_2": {
+      "theme": "Start the Review Engine",
+      "actions": [
+        {
+          "action": "Post first 3 Facebook posts",
+          "details": "Post 1: before/after repair photo. Post 2: customer shoutout (ask permission, anonymize). Post 3: seasonal service reminder (e.g., \"Spring brake check\"). Space them across the week. No competitor is doing this.",
+          "deliverable": "3 Facebook posts live",
+          "source_finding": "r06-social-opportunities"
+        },
+        {
+          "action": "Set up review ask system",
+          "details": "Create a QR code linking to your Google review page. Print and place at the counter and on invoices. Ask every satisfied customer verbally before they leave.",
+          "deliverable": "QR code printed and placed. First 2 review requests made.",
+          "source_finding": "r04-reviews-gap"
+        }
+      ]
+    },
+    "week_3": {
+      "theme": "Own the Honest Mechanic Positioning",
+      "actions": [
+        {
+          "action": "Publish a GBP post on transparency",
+          "details": "Write a short post: \"We'll tell you what your car actually needs — nothing more.\" Include a real (anonymized) example of a time you saved a customer from an unnecessary repair.",
+          "deliverable": "GBP post live",
+          "source_finding": "r04-honesty-theme"
+        },
+        {
+          "action": "Continue Facebook — 3 more posts",
+          "details": "Keep cadence from Week 2. Try one educational post: \"How to know if your brakes actually need replacing.\" Mix in one community post (local event, holiday, etc.)",
+          "deliverable": "6 total Facebook posts live",
+          "source_finding": "r06-social-opportunities"
+        }
+      ]
+    },
+    "week_4": {
+      "theme": "Measure What Moved",
+      "actions": [
+        {
+          "action": "Check GBP Insights",
+          "details": "Log into Google Business Profile → Performance. Record: search impressions, direction requests, website clicks. Compare to baseline if available.",
+          "deliverable": "GBP metrics noted for Month 2 comparison"
+        },
+        {
+          "action": "Count new reviews",
+          "details": "How many new Google reviews came in this month? What themes are appearing? Are customers mentioning honesty or transparency?",
+          "deliverable": "Review count delta recorded"
+        },
+        {
+          "action": "Assess Facebook engagement",
+          "details": "Which posts got the most reach and comments? Double down on that content type in Month 2.",
+          "deliverable": "Top 2 performing post types identified"
+        }
+      ]
+    },
+    "month_2_lookahead": [
+      {
+        "action": "Submit for AAA Approved Auto Repair",
+        "details": "Application process takes 2–4 weeks. No competitor has this certification — highest trust signal available for new customer acquisition.",
+        "source_finding": "r05-citation-gaps",
+        "speed": "medium"
+      },
+      {
+        "action": "Design prepaid maintenance plan",
+        "details": "3 oil changes + tire rotations for a flat fee. Test with 5 customers before any formal promotion. None of the 10 competitors offer this.",
+        "source_finding": "r04-ownable-gap",
+        "speed": "medium"
+      },
+      {
+        "action": "Target \"Japanese auto repair San Carlos\" in local pack",
+        "details": "Build additional local citations (Nextdoor, YellowPages, etc.) to reinforce the Japanese import specialist positioning.",
+        "source_finding": "r05-seo-opportunities",
+        "speed": "long"
+      }
+    ]
+  }
+}

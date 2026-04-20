@@ -1,0 +1,577 @@
+{
+  "cover": {
+    "skill": "report-01-cover",
+    "business_name": "Midtown Auto Repair",
+    "location": "Sacramento, CA",
+    "business_type": "auto_repair",
+    "customer_address": "Sacramento, CA",
+    "report_date": "2026-04-17",
+    "competitor_count": 4,
+    "market_trends_score": null,
+    "market_trends_label": "data_unavailable",
+    "market_sentiment": "stable",
+    "top_3_opportunities": [
+      "Midas Florin Rd is the price leader — consider a value bundle to compete without matching their lows",
+      "Torino Auto Midtown is growing and active on social — differentiate on trust and service quality",
+      "Precision Auto Care uses volume pricing — position Midtown on expertise and customer care instead"
+    ],
+    "executive_summary_paragraph": "The Sacramento/Florin Rd auto repair market has 4 clearly differentiated competitors within 2.1 miles. Midas Florin Rd South is the aggressive price leader, undercutting market rates on alignments by 27%. Precision Auto Care Downtown competes on volume with 13% below market pricing. Torino Auto Midtown is the growth player — gaining market share with social media activity and premium service positioning. Delta Auto & Truck recently opened nearby with premium pricing, signaling confidence in the east Sacramento market. Midtown Auto Repair's best move is to avoid competing directly on price with Midas and instead own the 'honest, customer-first' positioning that no competitor has claimed in this market."
+  },
+  "landscape": {
+    "skill": "report-02-landscape",
+    "report_date": "2026-04-17",
+    "summary": {
+      "high_threat": 2,
+      "medium_threat": 1,
+      "low_threat": 1
+    },
+    "competitors": [
+      {
+        "rank": 1,
+        "name": "Midas — Florin Rd South",
+        "type": "Chain",
+        "address": "Florin Rd, Sacramento, CA 95823",
+        "google_rating": 4.1,
+        "google_review_count": 312,
+        "yelp_rating": 3.8,
+        "yelp_review_count": 89,
+        "total_reviews": 401,
+        "threat": "HIGH",
+        "key_differentiator": "National chain price leader — undercutting market on alignments by 27%",
+        "urls": {
+          "google_maps": "https://maps.google.com/?q=Midas+Florin+Rd+Sacramento+CA"
+        }
+      },
+      {
+        "rank": 2,
+        "name": "Torino Auto Midtown",
+        "type": "Independent",
+        "address": "Midtown Sacramento, CA",
+        "google_rating": 4.5,
+        "google_review_count": 178,
+        "yelp_rating": 4.4,
+        "yelp_review_count": 203,
+        "total_reviews": 381,
+        "threat": "HIGH",
+        "key_differentiator": "Growing independent shop — active social media, premium positioning, gaining share",
+        "urls": {
+          "google_maps": "https://maps.google.com/?q=Torino+Auto+Midtown+Sacramento+CA"
+        }
+      },
+      {
+        "rank": 3,
+        "name": "Precision Auto Care Downtown",
+        "type": "Independent",
+        "address": "Downtown Sacramento, CA",
+        "google_rating": 4.2,
+        "google_review_count": 145,
+        "yelp_rating": 4,
+        "yelp_review_count": 167,
+        "total_reviews": 312,
+        "threat": "MEDIUM",
+        "key_differentiator": "Volume player with 13% below market pricing — competing on price, not service",
+        "urls": {
+          "google_maps": "https://maps.google.com/?q=Precision+Auto+Care+Downtown+Sacramento+CA"
+        }
+      },
+      {
+        "rank": 4,
+        "name": "Delta Auto & Truck East Sac",
+        "type": "Independent",
+        "address": "East Sacramento, CA",
+        "google_rating": 4.3,
+        "google_review_count": 67,
+        "yelp_rating": null,
+        "yelp_review_count": null,
+        "total_reviews": 67,
+        "threat": "LOW",
+        "key_differentiator": "New location, premium pricing — monitor first 90 days, unknown market impact",
+        "urls": {
+          "google_maps": "https://maps.google.com/?q=Delta+Auto+Truck+East+Sacramento+CA"
+        }
+      }
+    ]
+  },
+  "pricing": {
+    "skill": "report-03-pricing",
+    "report_date": "2026-04-17",
+    "baseline": {
+      "oil_change": 75,
+      "brake_pad_front": 270,
+      "alignment": 109
+    },
+    "competitors": [
+      {
+        "name": "Midas — Florin Rd South",
+        "oil_change": 69,
+        "brake_pad_front": 249,
+        "alignment": 79,
+        "has_promotions": false
+      },
+      {
+        "name": "Torino Auto Midtown",
+        "oil_change": 89,
+        "brake_pad_front": 295,
+        "alignment": 119,
+        "has_promotions": false
+      },
+      {
+        "name": "Precision Auto Care Downtown",
+        "oil_change": 74,
+        "brake_pad_front": 255,
+        "alignment": 95,
+        "has_promotions": false
+      },
+      {
+        "name": "Delta Auto & Truck East Sac",
+        "oil_change": 82,
+        "brake_pad_front": 310,
+        "alignment": 125,
+        "has_promotions": false
+      }
+    ],
+    "promo_summary": "No competitor has active published promotions in the Florin Rd/Sacramento market.",
+    "market_opportunity": {
+      "gap_service": "Alignment and brake services show widest pricing variance — opportunity for Midtown to offer transparent menu pricing",
+      "opportunity_note": "Midas undercuts on alignments by 27%. Midtown should consider bundling alignments with brake service rather than matching Midas on individual services."
+    }
+  },
+  "reviews": {
+    "skill": "report-04-reviews",
+    "total_reviews_analyzed": 1161,
+    "total_competitors_analyzed": 4,
+    "ownable_gaps": [
+      {
+        "gap": "No competitor markets 'honest / no upselling'",
+        "opportunity": "This is the #1 praise theme across all competitor reviews — own this promise explicitly"
+      },
+      {
+        "gap": "No independent shop claims ASE certification visibility",
+        "opportunity": "Making technician credentials visible builds trust and justifies premium pricing"
+      }
+    ],
+    "competitors": [
+      {
+        "name": "Midas — Florin Rd South",
+        "rating_label": "mixed",
+        "total_reviews_analyzed": 401,
+        "top_praise_themes": [
+          {
+            "theme": "Convenient location and hours"
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Upselling and add-ons"
+          }
+        ],
+        "price_sentiment": {
+          "net_sentiment": "negative"
+        }
+      },
+      {
+        "name": "Torino Auto Midtown",
+        "rating_label": "positive",
+        "total_reviews_analyzed": 381,
+        "top_praise_themes": [
+          {
+            "theme": "Honest and transparent"
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Appointment availability"
+          }
+        ],
+        "price_sentiment": {
+          "net_sentiment": "neutral"
+        }
+      },
+      {
+        "name": "Precision Auto Care Downtown",
+        "rating_label": "positive",
+        "total_reviews_analyzed": 312,
+        "top_praise_themes": [
+          {
+            "theme": "Fair pricing"
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "Long wait times"
+          }
+        ],
+        "price_sentiment": {
+          "net_sentiment": "positive"
+        }
+      },
+      {
+        "name": "Delta Auto & Truck East Sac",
+        "rating_label": "positive",
+        "total_reviews_analyzed": 67,
+        "top_praise_themes": [
+          {
+            "theme": "Professional service"
+          }
+        ],
+        "top_complaint_themes": [
+          {
+            "theme": "New location, limited track record"
+          }
+        ],
+        "price_sentiment": {
+          "net_sentiment": "neutral"
+        }
+      }
+    ],
+    "market_sentiment": {
+      "top_praise_across_all": [
+        {
+          "theme": "Honest / no upselling",
+          "frequency": "high"
+        },
+        {
+          "theme": "Friendly and knowledgeable staff",
+          "frequency": "high"
+        },
+        {
+          "theme": "Fair and transparent pricing",
+          "frequency": "medium"
+        }
+      ],
+      "market_wide_complaints": [
+        {
+          "theme": "Long wait times",
+          "frequency": "high"
+        },
+        {
+          "theme": "Upselling and unexpected charges",
+          "frequency": "high"
+        },
+        {
+          "theme": "Difficulty getting appointments",
+          "frequency": "medium"
+        }
+      ],
+      "price_sentiment_summary": {
+        "percent_positive": 42
+      }
+    },
+    "actionable_insights": [
+      {
+        "insight": "Customers reward shops that explain what needs doing and why",
+        "implication": "Train technicians to give clear explanations — this converts one-time visitors to loyal customers"
+      },
+      {
+        "insight": "Price complaints spike when customers feel surprised by the total",
+        "implication": "Offer upfront estimates and flag potential overages before proceeding"
+      }
+    ]
+  },
+  "seo": {
+    "skill": "report-05-seo",
+    "google_presence_ranking": [
+      {
+        "rank": 1,
+        "name": "Midas — Florin Rd South",
+        "google_presence": "Dominant",
+        "google_rating": 4.1,
+        "google_reviews": 312,
+        "local_pack_observed": true
+      },
+      {
+        "rank": 2,
+        "name": "Torino Auto Midtown",
+        "google_presence": "Strong",
+        "google_rating": 4.5,
+        "google_reviews": 178,
+        "local_pack_observed": true
+      },
+      {
+        "rank": 3,
+        "name": "Precision Auto Care Downtown",
+        "google_presence": "Moderate",
+        "google_rating": 4.2,
+        "google_reviews": 145,
+        "local_pack_observed": true
+      },
+      {
+        "rank": 4,
+        "name": "Delta Auto & Truck East Sac",
+        "google_presence": "Emerging",
+        "google_rating": 4.3,
+        "google_reviews": 67,
+        "local_pack_observed": false
+      }
+    ],
+    "local_pack_summary": [
+      {
+        "search_term": "auto repair Sacramento",
+        "competitors_observed_in_pack": [
+          "Midas Florin Rd",
+          "Torino Auto Midtown",
+          "Precision Auto Care"
+        ]
+      },
+      {
+        "search_term": "brake repair Sacramento",
+        "competitors_observed_in_pack": [
+          "Midas Florin Rd",
+          "Torino Auto Midtown"
+        ]
+      },
+      {
+        "search_term": "alignment Sacramento",
+        "competitors_observed_in_pack": [
+          "Midas Florin Rd",
+          "Precision Auto Care"
+        ]
+      }
+    ],
+    "citation_gaps": [
+      {
+        "directory": "RepairPal",
+        "priority": "high",
+        "note": "None of the 4 competitors have claimed RepairPal — free high-intent traffic available"
+      },
+      {
+        "directory": "AAA Certified",
+        "priority": "high",
+        "note": "No competitor displays AAA certification — differentiation opportunity"
+      },
+      {
+        "directory": "Yelp",
+        "priority": "medium",
+        "note": "All competitors have Yelp presence but none are fully optimized"
+      }
+    ],
+    "quick_wins_for_customer": [
+      {
+        "action": "Claim and optimize Google Business Profile",
+        "timeframe": "This week",
+        "expected_impact": "High — direct impact on local search visibility"
+      },
+      {
+        "action": "Add photos to Google Business Profile",
+        "timeframe": "This week",
+        "expected_impact": "Medium — increases click-through from search results"
+      }
+    ],
+    "seo_opportunities": [
+      {
+        "competitor_weakness": "No competitor has claimed 'honest auto repair' positioning in Sacramento",
+        "opportunity": "Midtown Auto Repair can own this term with targeted Google Business Profile and website copy"
+      }
+    ]
+  },
+  "social": {
+    "skill": "report-06-social",
+    "market_pattern": "No competitor has active social media in the Sacramento/Florin Rd market. Torino Auto Midtown shows the most social activity signals. This is a first-mover opportunity for Midtown Auto Repair to establish social dominance.",
+    "competitors": [
+      {
+        "name": "Midas — Florin Rd South",
+        "presence": "dormant",
+        "facebook_url": null,
+        "followers": null
+      },
+      {
+        "name": "Torino Auto Midtown",
+        "presence": "active",
+        "facebook_url": null,
+        "followers": null
+      },
+      {
+        "name": "Precision Auto Care Downtown",
+        "presence": "dormant",
+        "facebook_url": null,
+        "followers": null
+      },
+      {
+        "name": "Delta Auto & Truck East Sac",
+        "presence": "absent",
+        "facebook_url": null,
+        "followers": null
+      }
+    ],
+    "dormant_competitors": [
+      {
+        "name": "Midas — Florin Rd South",
+        "facebook_url": null,
+        "status": "No active social media detected"
+      },
+      {
+        "name": "Precision Auto Care Downtown",
+        "facebook_url": null,
+        "status": "No active social media detected"
+      }
+    ],
+    "uncontested_platforms": [
+      {
+        "platform": "Instagram",
+        "note": "No competitor has claimed Instagram in this market — first-mover opportunity"
+      },
+      {
+        "platform": "Facebook",
+        "note": "All competitors are absent or dormant — page can be established without competition"
+      }
+    ],
+    "social_opportunities": [
+      {
+        "competitor_weakness": "No competitor posts regularly on social media",
+        "opportunity": "Consistent Instagram/Facebook posting with shop photos, customer testimonials, and service tips will build audience with zero competition"
+      }
+    ]
+  },
+  "findings": {
+    "skill": "report-07-findings",
+    "findings": [
+      {
+        "rank": 1,
+        "title": "Own the 'Honest Shop' Positioning",
+        "speed": "quick",
+        "insight": "No competitor is marketing honest, no-upsell service — but this is the #1 thing customers in reviews say they want and rarely find.",
+        "why_it_matters": "You can differentiate immediately without changing pricing or services.",
+        "specific_action": "Update your Google Business Profile description, website hero, and any advertising to lead with 'honest' and 'no surprise pricing.'"
+      },
+      {
+        "rank": 2,
+        "title": "Midas Undercuts on Alignments — Don't Match, Bundle",
+        "speed": "quick",
+        "insight": "Midas Florin Rd charges 27% below market on alignments. Competing on price directly with a national chain is a losing game.",
+        "why_it_matters": "Bundling alignment with brake service lets you compete on value while protecting margins.",
+        "specific_action": "Create a 'Brake & Alignment Check' bundle. Market it as a $X value — customers get comprehensive assessment, you differentiate on expertise."
+      },
+      {
+        "rank": 3,
+        "title": "Claim RepairPal Listing — It's Free Traffic",
+        "speed": "medium",
+        "insight": "Not a single competitor in this market has claimed their RepairPal listing. RepairPal sends high-intent customers directly to shops that are listed.",
+        "why_it_matters": "Free, high-intent traffic that your competitors can't easily copy.",
+        "specific_action": "Claim your RepairPal listing this week. Add photos, services, and hours. Takes 15-20 minutes."
+      },
+      {
+        "rank": 4,
+        "title": "Delta Auto Is the Unknown Variable",
+        "speed": "quick",
+        "insight": "Delta Auto & Truck just opened in East Sacramento with premium pricing. New shops either stumble or find their footing in the first 90 days.",
+        "why_it_matters": "How they position themselves in the next few months will determine whether they become a threat or just another competitor.",
+        "specific_action": "Monitor Delta Auto's Google listing, reviews, and pricing for the next 90 days. Adjust if they start gaining significant share."
+      },
+      {
+        "rank": 5,
+        "title": "Social Media Is Completely Uncontested",
+        "speed": "medium",
+        "insight": "No competitor has active social media presence. Torino Auto shows the most activity signals but has not claimed the space.",
+        "why_it_matters": "A consistent Instagram presence with shop photos, customer testimonials, and service education will build an audience that competitors can't easily replicate.",
+        "specific_action": "Start with Instagram — post 3x per week. Shop photos, before/after brake jobs, and 'how it works' content. No competitor is doing this."
+      }
+    ]
+  },
+  "roadmap": {
+    "skill": "report-08-roadmap",
+    "week_1": {
+      "theme": "Establish Your Position",
+      "actions": [
+        {
+          "action": "Update Google Business Profile to lead with 'Honest Auto Repair — No Surprise Pricing'",
+          "deliverable": "GBP description updated"
+        },
+        {
+          "action": "Claim RepairPal listing and fill out profile completely",
+          "deliverable": "RepairPal listing live and complete"
+        },
+        {
+          "action": "Take 10 photos of the shop and team for social media and Google",
+          "deliverable": "Photos ready to post"
+        }
+      ]
+    },
+    "week_2": {
+      "theme": "Competitive Response",
+      "actions": [
+        {
+          "action": "Create 'Brake & Alignment Check' bundle offer",
+          "deliverable": "Bundle priced and ready to sell"
+        },
+        {
+          "action": "Call 3 local shops to get current pricing (oil, brake, alignment) for intel",
+          "deliverable": "Updated pricing notes"
+        },
+        {
+          "action": "Set up Instagram account and post first 3 pieces of content",
+          "deliverable": "Instagram live with 3 posts"
+        }
+      ]
+    },
+    "week_3": {
+      "theme": "Online Presence",
+      "actions": [
+        {
+          "action": "Ask 5 satisfied customers to leave Google reviews",
+          "deliverable": "At least 3 new Google reviews"
+        },
+        {
+          "action": "Post on Instagram 3x this week",
+          "deliverable": "6 total posts on Instagram"
+        },
+        {
+          "action": "Check Delta Auto & Truck's Google listing and first reviews",
+          "deliverable": "Competitive intel summary"
+        }
+      ]
+    },
+    "week_4": {
+      "theme": "Review and Adjust",
+      "actions": [
+        {
+          "action": "Review first 30 days of new Google reviews — respond to all",
+          "deliverable": "All reviews responded to"
+        },
+        {
+          "action": "Assess Instagram engagement — adjust content strategy",
+          "deliverable": "Content calendar for next 30 days"
+        },
+        {
+          "action": "Review bundle performance — adjust pricing or messaging if needed",
+          "deliverable": "Pricing/positioning tweaks documented"
+        }
+      ]
+    },
+    "month_1_metrics": [
+      {
+        "metric": "New Google reviews",
+        "target": "+5 reviews, 4.5+ average",
+        "source_finding": "Online presence gap"
+      },
+      {
+        "metric": "Google Business Profile views",
+        "target": "+20% vs prior month",
+        "source_finding": "SEO opportunity"
+      },
+      {
+        "metric": "Bundle service inquiries",
+        "target": "At least 2 bundle requests",
+        "source_finding": "Competitive response"
+      },
+      {
+        "metric": "Instagram followers",
+        "target": "+20 followers",
+        "source_finding": "Social opportunity"
+      }
+    ],
+    "month_2_lookahead": [
+      {
+        "action": "Evaluate RepairPal traffic",
+        "details": "Review whether RepairPal listing is generating quote requests"
+      },
+      {
+        "action": "Consider Facebook page",
+        "details": "If Instagram is working, extend presence to Facebook with similar content"
+      },
+      {
+        "action": "Pricing review",
+        "details": "Check whether competitors have adjusted pricing in response to your positioning"
+      }
+    ]
+  }
+}

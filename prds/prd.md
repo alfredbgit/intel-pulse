@@ -1,30 +1,48 @@
-# PRD — IntelPulse Sample Competitive Report (One-Pager)
+# PRD — IntelPulse Email Delivery Fix
 
 ## What we're building
-A sample one-page competitive intelligence report PDF that IntelPulse can use as:
-1. A product sample/demo showing buyers what they'll receive
-2. A template for delivering actual reports to clients
-This is a proof-of-concept report using a real vertical (e.g., auto repair shops or a similar SMB market).
+Add email delivery to the IntelPulse order-api using the existing AgentMail API key. System is fully built end-to-end (Stripe → Order API → Research Pipeline → PDF generation). Revenue is blocked because there is no way to send the completed PDF to the customer. This PRD fixes that.
 
 ## What it does
-- One-page PDF professional competitive intelligence report
-- Includes: competitor names, positioning, pricing, strengths, weaknesses, opportunities
-- Clean, branded layout with IntelPulse logo/header
-- Demonstrates the $97 deliverable a buyer would receive
+1. **New endpoint: `POST /api/deliver/:orderId`**
+   - Reads the PDF from storage (`reports/{slug}/{slug}-report.pdf` or equivalent)
+   - Calls AgentMail API to send email with PDF attachment to the customer's email address
+   - Marks order status as `delivered` in the database
+
+2. **New file: `order-api/delivery.js`**
+   - AgentMail API integration using `AGENTMAIL_API_KEY` from environment
+   - Sends email with:
+     - From: `reports@agentmail.to` (or configurable)
+     - To: customer email (from order record)
+     - Subject: `Your IntelPulse Report — {business_name}`
+     - Body: plain text summary (customer's business name, report type, what to expect)
+     - Attachment: `{business_name}-intel-report.pdf` (Base64-encoded)
+   - Returns delivery confirmation or error
+
+3. **PDF storage solution for Vercel**
+   - Store PDFs in `order-api/public/reports/` served statically
+   - Or: commit PDFs to the repo (they are small enough, ~1MB each)
+   - Document which approach was used
+
+4. **Trigger mechanism**
+   - The existing cron sweep or a manual admin endpoint can call `POST /api/deliver/:orderId`
+   - Admin dashboard "Fulfill" button that calls the endpoint
 
 ## What done looks like
-- Single PDF, 1-2 pages
-- Professional layout: header with IntelPulse branding, sections for each competitor
-- 3-5 competitor profiles with: name, tagline/positioning, pricing, key strengths, key weaknesses, opportunities for the buyer
-- Deployed publicly so Ryan/Alfred can share link with prospects
+- [ ] `POST /api/deliver/:orderId` responds 200 and sends email with PDF attachment
+- [ ] AgentMail receives the email and delivers to customer inbox
+- [ ] PDF attachment opens correctly (verified by test order)
+- [ ] Order status updates to `delivered` in database after successful send
+- [ ] End-to-end test with a real order (data collection → payment → PDF generation → delivery)
 
 ## Tech constraints
-- HTML-to-PDF build (Ralph decides the tooling)
-- Host in `~/Projects/alfreds-apps/intel-pulse/`
-- Deployed publicly — Ralph owns deploy
-
-## Content
-Use a real vertical for the sample. If Ryan's auto repair shop (A+ Japanese Auto) is the test client, do a real mini-report on that competitive landscape. Otherwise, use a generic small business vertical.
+- Uses existing `AGENTMAIL_API_KEY` in `~/.openclaw/.env` — do NOT create new accounts
+- Node.js with `https` module (same pattern as existing Stripe API calls in order-api)
+- PDF path: `reports/{slug}/{slug}-report.pdf` — confirm path from Ralph's existing code
+- Vercel deployment: PDF must be accessible in the serverless function's filesystem or served via static path
 
 ## Timeline
-Needed this week — before outreach starts on IntelPulse.
+Build today. Test tonight. Alpha outreach can begin tomorrow.
+
+## Background context
+Newman has Protocol 1 read-only access — cannot send emails. AgentMail API key already exists and supports PDF attachments. This workaround bypasses Newman's constraint entirely.

@@ -3,5 +3,9 @@
 auto/
 order-api/
 
+# Dependencies
+node_modules/
+sample-report/node_modules/
+
 # OS
 *.local
